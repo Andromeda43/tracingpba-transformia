@@ -1,0 +1,256 @@
+---
+// Hero.astro - Componente principal para la sección de héroe de TracingPBA
+---
+
+<section class="hero tracingpba-hero" id="hero">
+    <!-- Elementos de fondo y decoración -->
+    <div class="grid-background"></div>
+    <div class="scanlines"></div>
+    
+    <div class="neon-circle" style="--size: 300px; --top: 20%; --left: 10%; --color: rgba(176, 66, 255, 0.2); --delay: 0s;"></div>
+    <div class="neon-circle" style="--size: 200px; --top: 60%; --left: 70%; --color: rgba(66, 255, 209, 0.2); --delay: 2s;"></div>
+    
+    <div class="geometric-element rect-element" style="--size: 40px; --top: 15%; --left: 85%; --rotate: 45deg;"></div>
+    <div class="geometric-element triangle-element" style="--size: 50px; --top: 75%; --left: 15%; --rotate: 30deg;"></div>
+    <div class="geometric-element cross-element" style="--size: 35px; --top: 25%; --left: 25%; --rotate: 15deg;"></div>
+    
+    <div class="particles-container">
+      <div class="particle" style="--size: 4px; --top: 20%; --left: 30%; --speed: 20s;"></div>
+      <div class="particle" style="--size: 3px; --top: 40%; --left: 60%; --speed: 15s;"></div>
+      <div class="particle" style="--size: 5px; --top: 70%; --left: 40%; --speed: 25s;"></div>
+      <div class="particle" style="--size: 2px; --top: 30%; --left: 80%; --speed: 18s;"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text-container animate-on-scroll">
+          <h1 class="hero-title">Trazabilidad <span class="hero-title-accent">360°</span> para tu Planta de Beneficio Animal</h1>
+          <p class="tagline">Automatiza <span class="highlight">SINIGAN</span>, precintos y reportes — en minutos, no en horas.</p>
+          <p class="hero-description">TracingPBA centraliza la recepción de ganado, controla cada checkpoint y genera la documentación que exige el INVIMA, todo en una sola suite cloud.</p>
+          
+          <div class="hero-bullets">
+            <div class="hero-bullet">
+              <div class="bullet-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                  <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                  <path d="M15 14h6"></path>
+                </svg>
+              </div>
+              <div class="bullet-text">Sin API oficial: scraping certificado de guías SINIGAN</div>
+            </div>
+            
+            <div class="hero-bullet">
+              <div class="bullet-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 2h3a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3"></path>
+                  <path d="M7 2v4"></path>
+                  <path d="M17 2v4"></path>
+                  <path d="M2 10h20"></path>
+                </svg>
+              </div>
+              <div class="bullet-text">Precintos listos: 100 etiquetas únicas en menos de 25 segundos</div>
+            </div>
+            
+            <div class="hero-bullet">
+              <div class="bullet-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <div class="bullet-text">Dashboard interactivo con filtros cruzados</div>
+            </div>
+            
+            <div class="hero-bullet">
+              <div class="bullet-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="bullet-text">PDFs: guías de despacho, certificados de beneficio y calidad</div>
+            </div>
+          </div>
+          
+          <div class="btn-container">
+            <a href="#demo" class="cybr-btn">
+              Probar demo interactiva
+              <span class="cybr-btn__glitch"></span>
+            </a>
+            <a href="#ficha" class="cybr-btn cybr-btn--secondary">
+              Descargar ficha técnica
+              <span class="cybr-btn__glitch"></span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual animate-on-scroll">
+          <div class="terminal-container">
+            <div class="terminal">
+              <div class="terminal-header">
+                <div class="terminal-button"></div>
+                <div class="terminal-button"></div>
+                <div class="terminal-button"></div>
+                <span class="terminal-title">TracingPBA</span>
+              </div>
+              <div class="terminal-content">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-text typing-effect">Iniciando sistema de trazabilidad...</span>
+                </div>
+                <div class="terminal-line" style="animation-delay: 1s;">
+                  <span class="terminal-prompt">></span>
+                  <span class="terminal-text">Conectando con SINIGAN...</span>
+                </div>
+                <div class="terminal-line" style="animation-delay: 2s;">
+                  <span class="terminal-prompt">></span>
+                  <span class="terminal-text">Extrayendo datos de guías de movilización</span>
+                </div>
+                <div class="terminal-line" style="animation-delay: 3s;">
+                  <span class="terminal-prompt">></span>
+                  <span class="terminal-text">Checkpoints activados: Corrales, Proceso, Almacenamiento</span>
+                </div>
+                <div class="terminal-line" style="animation-delay: 4s;">
+                  <span class="terminal-prompt">></span>
+                  <span class="terminal-text">Dashboard listo - 8,009 animales registrados</span>
+                </div>
+                <div class="terminal-status-bar">
+                  <div class="status-indicator active"></div>
+                  <span class="status-text">Sistema operativo</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Elementos decorativos -->
+            <div class="circuit-line cl-1"></div>
+            <div class="circuit-node cn-1"></div>
+            <div class="circuit-line cl-2"></div>
+            <div class="circuit-node cn-2"></div>
+            <div class="circuit-line cl-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </div>
+  </section>
+  
+  <style>
+    /* Estilos específicos para este componente */
+    .terminal-text.typing-effect {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid var(--tracingpba-teal);
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--tracingpba-teal) }
+    }
+    
+    .terminal-line {
+      opacity: 0;
+      animation: fade-in-line 0.5s ease forwards;
+      animation-delay: calc(var(--index, 0) * 0.8s);
+    }
+    
+    .terminal-line:nth-child(1) {
+      --index: 1;
+    }
+    
+    .terminal-line:nth-child(2) {
+      --index: 2;
+    }
+    
+    .terminal-line:nth-child(3) {
+      --index: 3;
+    }
+    
+    .terminal-line:nth-child(4) {
+      --index: 4;
+    }
+    
+    .terminal-line:nth-child(5) {
+      --index: 5;
+    }
+    
+    @keyframes fade-in-line {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Mejoras para garantizar animaciones fluidas */
+    .dom-loaded .hero-text-container,
+    .dom-loaded .hero-visual {
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .animate-on-scroll.visible {
+      animation: fade-in-up 0.8s ease forwards;
+    }
+    
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Marcar que el DOM está cargado para iniciar animaciones
+      document.body.classList.add('dom-loaded');
+      
+      // Iniciar animaciones visibles en la pantalla
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach(element => {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+          element.classList.add('visible');
+        }
+      });
+      
+      // Animación para la flecha de desplazamiento - lleva a la siguiente sección
+      const scrollArrow = document.querySelector('.scroll-arrow');
+      if (scrollArrow) {
+        scrollArrow.addEventListener('click', () => {
+          const nextSection = document.querySelector('#pain-points');
+          if (nextSection) {
+            const navbarHeight = document.querySelector('.tracingpba-navbar')?.offsetHeight || 0;
+            const targetPosition = nextSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+  </script>

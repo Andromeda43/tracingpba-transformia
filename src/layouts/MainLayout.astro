@@ -1,0 +1,336 @@
+---
+// MainLayout.astro - Componente de layout principal para TracingPBA
+
+const { title, description } = Astro.props;
+const metaDescription = description || "TracingPBA - Sistema de trazabilidad 360° para plantas de beneficio animal. Automatiza SINIGAN, precintos y reportes en una sola suite cloud.";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={metaDescription}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- SEO -->
+  <title>{title}</title>
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tracingpba.transformia.dev/">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={metaDescription}>
+  <meta property="og:image" content="https://tracingpba.transformia.dev/images/tracingpba-social-preview.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tracingpba.transformia.dev/">
+  <meta property="twitter:title" content={title}>
+  <meta property="twitter:description" content={metaDescription}>
+  <meta property="twitter:image" content="https://tracingpba.transformia.dev/images/tracingpba-social-preview.jpg">
+  
+  <!-- Estilos críticos base -->
+  <style is:global>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #0a0a14;
+      color: white;
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* Altura del navbar */
+    }
+    
+    /* Variables CSS específicas para TracingPBA */
+    :root {
+      --font-sans: 'Space Grotesk', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      
+      --color-dark: #0a0a14;
+      --color-dark-blue: #141428;
+      --color-dark-purple: #1a142d;
+      --neon-purple: #b042ff;
+      --neon-blue: #4287ff;
+      --neon-pink: #ff42b0;
+      
+      --tracingpba-dark: #1A1A40;
+      --tracingpba-teal: #42FFD1;
+      --tracingpba-red: #FF4272;
+      --tracingpba-light: #F8F9FC;
+      --tracingpba-yellow: #FFDE42;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar específico para TracingPBA -->
+  <header class="tracingpba-navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="/">
+          <span class="brand-transformia">Transformia</span>
+          <span class="brand-separator">/</span>
+          <span class="brand-product">TracingPBA</span>
+        </a>
+      </div>
+      
+      <nav class="navbar-links">
+        <a href="#modules" class="navbar-link">Módulos</a>
+        <a href="#dashboard" class="navbar-link">Dashboard</a>
+        <a href="#precintos" class="navbar-link">Precintos</a>
+        <a href="#reports" class="navbar-link">Reportes</a>
+        <a href="#roadmap" class="navbar-link">Roadmap</a>
+        <a href="#testimonials" class="navbar-link">Testimonios</a>
+        <a href="#faq" class="navbar-link">FAQ</a>
+      </nav>
+      
+      <div class="navbar-actions">
+        <a href="#contacto" class="navbar-cta">Solicitar Demo</a>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Menú móvil -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="mobile-menu-brand">
+          <span class="brand-transformia">Transformia</span>
+          <span class="brand-separator">/</span>
+          <span class="brand-product">TracingPBA</span>
+        </div>
+        <button class="mobile-menu-close" aria-label="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <nav class="mobile-menu-links">
+        <a href="#modules" class="mobile-menu-link">Módulos</a>
+        <a href="#dashboard" class="mobile-menu-link">Dashboard</a>
+        <a href="#precintos" class="mobile-menu-link">Precintos</a>
+        <a href="#reports" class="mobile-menu-link">Reportes</a>
+        <a href="#roadmap" class="mobile-menu-link">Roadmap</a>
+        <a href="#testimonials" class="mobile-menu-link">Testimonios</a>
+        <a href="#faq" class="mobile-menu-link">FAQ</a>
+        <a href="#contacto" class="mobile-menu-cta">Solicitar Demo</a>
+      </nav>
+      
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-social">
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+        <div class="mobile-menu-contact">
+          <a href="mailto:contacto@transformia.dev">contacto@transformia.dev</a>
+          <a href="tel:+573100000000">+57 310 000 0000</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <slot />
+  </main>
+  
+  <!-- Footer -->
+  <footer class="tracingpba-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">Transformia</div>
+          <div class="footer-product">TracingPBA</div>
+          <div class="footer-tagline">Trazabilidad de próxima generación</div>
+        </div>
+        
+        <div class="footer-info">
+          <p>Transformia © 2025</p>
+          <p>NIT — Carrera #, Bogotá, Colombia</p>
+          <p>contacto@transformia.dev · +57 310 000 0000</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Política de Privacidad</a>
+          <a href="#terms">Términos</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botón de volver arriba -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle para menú móvil
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const mobileMenuClose = document.querySelector('.mobile-menu-close');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link, .mobile-menu-cta');
+      
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      }
+      
+      if (mobileMenuClose && mobileMenu) {
+        mobileMenuClose.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // Cerrar menú móvil al hacer clic en un enlace
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Navbar cambia de color al hacer scroll
+      const navbar = document.querySelector('.tracingpba-navbar');
+      
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        // Mostrar/ocultar botón de volver arriba
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      
+      // Botón de volver arriba
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+      
+      // Animación al hacer scroll
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight * 0.85) {
+            element.classList.add('visible');
+          }
+        });
+      };
+      
+      // Inicializar animaciones
+      setTimeout(animateOnScroll, 100);
+      
+      // Event listener para animaciones al hacer scroll
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Smooth scroll para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            const navbarHeight = document.querySelector('.tracingpba-navbar').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
