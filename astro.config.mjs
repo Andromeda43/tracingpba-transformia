@@ -1,5 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://tracingpba.transformia.dev',
+  // Si quieres SSR más adelante, puedes añadir:
+  // output: 'server',
+  // adapter: node({
+  //   mode: 'standalone'
+  // })
+});

@@ -1,0 +1,832 @@
+---
+// Dashboard.astro - Componente para la sección del dashboard interactivo
+---
+
+<section class="dashboard-section" id="dashboard">
+    <div class="container">
+      <div class="dashboard-content">
+        <div class="dashboard-text animate-on-scroll">
+          <h2 class="section-title">Datos que impulsan decisiones</h2>
+          <p class="dashboard-description">
+            TracingPBA ofrece un dashboard interactivo con filtros cruzados en tiempo real. Selecciona cualquier cliente, fecha o municipio y todas las visualizaciones se actualizan instantáneamente para mostrar exactamente lo que necesitas.
+          </p>
+          
+          <ul class="dashboard-features">
+            <li>
+              <span class="feature-highlight">Filtros inteligentes:</span> 
+              Cruza cualquier combinación de variables (cliente, fecha, origen, etc.)
+            </li>
+            <li>
+              <span class="feature-highlight">Visualización en tiempo real:</span> 
+              Actualización automática sin recargar la página
+            </li>
+            <li>
+              <span class="feature-highlight">Estado de proceso actual:</span> 
+              Visualiza lotes en corrales, proceso, refrigeración y despacho
+            </li>
+            <li>
+              <span class="feature-highlight">Exportación directa:</span> 
+              Genera Excel, PDF o comparte por email cualquier vista
+            </li>
+          </ul>
+          
+          <div class="dashboard-metrics">
+            <div class="metric">
+              <div class="metric-value">300%</div>
+              <div class="metric-description">más rápido en generar informes</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">0</div>
+              <div class="metric-description">hallazgos críticos en auditorías</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dashboard-preview animate-on-scroll">
+          <div class="dashboard-device">
+            <div class="device-header">
+              <div class="device-controls">
+                <span class="control"></span>
+                <span class="control"></span>
+                <span class="control"></span>
+              </div>
+              <div class="device-title">TracingPBA Analytics</div>
+            </div>
+            
+            <div class="device-screen">
+              <div class="dashboard-header">
+                <h3 class="screen-title">Panel de Control - Resumen General</h3>
+                <div class="dashboard-filters">
+                  <span class="filter">Último mes</span>
+                  <span class="filter active">Todos los clientes</span>
+                  <span class="filter">Bovinos</span>
+                </div>
+              </div>
+              
+              <div class="dashboard-widgets">
+                <div class="widget kpi-widget">
+                  <div class="widget-header">Animales procesados</div>
+                  <div class="kpi-value">8,009</div>
+                  <div class="kpi-change positive">+12.5% vs. mes anterior</div>
+                </div>
+                
+                <div class="widget kpi-widget">
+                  <div class="widget-header">Decomisos</div>
+                  <div class="kpi-value">1.2%</div>
+                  <div class="kpi-change negative">-0.3% vs. mes anterior</div>
+                </div>
+                
+                <div class="widget chart-widget">
+                  <div class="widget-header">Tendencia mensual</div>
+                  <div class="widget-chart">
+                    <div class="chart-bars">
+                      <div class="chart-bar" style="--height: 60%;">
+                        <div class="bar-tooltip">Ene: 720</div>
+                      </div>
+                      <div class="chart-bar" style="--height: 40%;">
+                        <div class="bar-tooltip">Feb: 480</div>
+                      </div>
+                      <div class="chart-bar" style="--height: 75%;">
+                        <div class="bar-tooltip">Mar: 900</div>
+                      </div>
+                      <div class="chart-bar" style="--height: 55%;">
+                        <div class="bar-tooltip">Abr: 660</div>
+                      </div>
+                      <div class="chart-bar" style="--height: 90%;">
+                        <div class="bar-tooltip">May: 1080</div>
+                      </div>
+                      <div class="chart-bar" style="--height: 65%;">
+                        <div class="bar-tooltip">Jun: 780</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="widget map-widget">
+                  <div class="widget-header">Mapa de origen</div>
+                  <div class="widget-map">
+                    <div class="map-hot-region" style="top: 20%; left: 30%;"></div>
+                    <div class="map-medium-region" style="top: 50%; left: 60%;"></div>
+                    <div class="map-cold-region" style="top: 70%; left: 20%;"></div>
+                    <div class="map-label" style="top: 15%; left: 25%;">Tunja</div>
+                    <div class="map-label" style="top: 45%; left: 55%;">Duitama</div>
+                    <div class="map-label" style="top: 65%; left: 15%;">Sogamoso</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="dashboard-table">
+                <div class="table-header">
+                  <div class="table-cell">Cliente</div>
+                  <div class="table-cell">Animales</div>
+                  <div class="table-cell">Estado</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell">Frigorífico Central</div>
+                  <div class="table-cell">1,240</div>
+                  <div class="table-cell"><span class="status-complete">Completado</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell">Carnes del Valle</div>
+                  <div class="table-cell">986</div>
+                  <div class="table-cell"><span class="status-in-progress">En proceso</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell">Distribuidora Norte</div>
+                  <div class="table-cell">752</div>
+                  <div class="table-cell"><span class="status-complete">Completado</span></div>
+                </div>
+              </div>
+              
+              <div class="dashboard-footer">
+                <div class="status-indicator">
+                  <span class="status-dot active"></span>
+                  <span class="status-text">Actualizado hace 3 minutos</span>
+                </div>
+                <div class="dashboard-actions">
+                  <span class="action-button">Exportar</span>
+                  <span class="action-button">Compartir</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Efectos de tecnología y datos alrededor del dashboard -->
+          <div class="data-line line1"></div>
+          <div class="data-line line2"></div>
+          <div class="data-line line3"></div>
+          <div class="data-node node1"></div>
+          <div class="data-node node2"></div>
+          <div class="data-node node3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Estilos base de la sección */
+    .dashboard-section {
+      background-color: var(--tracingpba-dark);
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dashboard-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(to right, rgba(59, 223, 180, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 223, 180, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    
+    .dashboard-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Estilos del texto */
+    .dashboard-text {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .section-title {
+      font-family: var(--font-sans);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      color: white;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--tracingpba-teal), transparent);
+      box-shadow: 0 0 10px rgba(59, 223, 180, 0.7);
+    }
+    
+    .dashboard-description {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+    }
+    
+    .dashboard-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2.5rem;
+    }
+    
+    .dashboard-features li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.25rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .dashboard-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      background-color: var(--tracingpba-teal);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(59, 223, 180, 0.7);
+    }
+    
+    .feature-highlight {
+      color: var(--tracingpba-teal);
+      font-weight: 600;
+    }
+    
+    .dashboard-metrics {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .metric {
+      background: rgba(10, 46, 54, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(59, 223, 180, 0.2);
+      padding: 1.5rem;
+      min-width: 180px;
+    }
+    
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--tracingpba-teal);
+      font-family: var(--font-mono);
+      margin-bottom: 0.5rem;
+    }
+    
+    .metric-description {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* Estilos del dashboard */
+    .dashboard-preview {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dashboard-device {
+      background: rgba(10, 30, 36, 0.8);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 223, 180, 0.2);
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .dashboard-device:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 223, 180, 0.3);
+    }
+    
+    .device-header {
+      background: rgba(10, 30, 36, 1);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(59, 223, 180, 0.2);
+    }
+    
+    .device-controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-right: 1.5rem;
+    }
+    
+    .control {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .control:first-child {
+      background-color: var(--tracingpba-red);
+    }
+    
+    .control:nth-child(2) {
+      background-color: var(--tracingpba-yellow);
+    }
+    
+    .control:last-child {
+      background-color: var(--tracingpba-teal);
+    }
+    
+    .device-title {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .device-screen {
+      padding: 1.5rem;
+      background: rgba(15, 35, 41, 0.9);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .screen-title {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      color: white;
+      margin: 0;
+    }
+    
+    .dashboard-filters {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    .filter {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      background: rgba(10, 46, 54, 0.6);
+      color: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(59, 223, 180, 0.1);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .filter.active, 
+    .filter:hover {
+      background: rgba(59, 223, 180, 0.2);
+      color: var(--tracingpba-teal);
+      border-color: rgba(59, 223, 180, 0.3);
+    }
+    
+    .dashboard-widgets {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .widget {
+      background: rgba(10, 46, 54, 0.4);
+      border-radius: 8px;
+      border: 1px solid rgba(59, 223, 180, 0.15);
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .widget-header {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 0.75rem;
+    }
+    
+    .kpi-widget {
+      grid-column: span 2;
+      text-align: center;
+    }
+    
+    .kpi-value {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    
+    .kpi-change {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+    
+    .kpi-change.positive {
+      color: var(--tracingpba-teal);
+    }
+    
+    .kpi-change.negative {
+      color: var(--tracingpba-red);
+    }
+    
+    .chart-widget {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    .map-widget {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    .widget-chart {
+      height: 150px;
+      position: relative;
+    }
+    
+    .chart-bars {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      gap: 8px;
+      padding: 0 0.5rem;
+    }
+    
+    .chart-bar {
+      flex: 1;
+      height: var(--height);
+      background: linear-gradient(180deg, var(--tracingpba-teal) 0%, rgba(59, 223, 180, 0.3) 100%);
+      border-radius: 3px 3px 0 0;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .chart-bar:hover {
+      transform: scaleY(1.05);
+    }
+    
+    .bar-tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10, 46, 54, 0.9);
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .chart-bar:hover .bar-tooltip {
+      opacity: 1;
+    }
+    
+    .widget-map {
+      height: 150px;
+      position: relative;
+      background: rgba(10, 30, 36, 0.5);
+      border-radius: 4px;
+    }
+    
+    .map-hot-region, 
+    .map-medium-region, 
+    .map-cold-region {
+      position: absolute;
+      border-radius: 50%;
+    }
+    
+    .map-hot-region {
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(circle, rgba(231, 76, 60, 0.6) 0%, rgba(231, 76, 60, 0) 70%);
+      animation: pulse-map 3s infinite alternate ease-in-out;
+    }
+    
+    .map-medium-region {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, rgba(230, 203, 68, 0.6) 0%, rgba(230, 203, 68, 0) 70%);
+      animation: pulse-map 3s infinite alternate-reverse ease-in-out;
+      animation-delay: 1s;
+    }
+    
+    .map-cold-region {
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, rgba(59, 223, 180, 0.6) 0%, rgba(59, 223, 180, 0) 70%);
+      animation: pulse-map 3s infinite alternate ease-in-out;
+      animation-delay: 0.5s;
+    }
+    
+    @keyframes pulse-map {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.3);
+      }
+    }
+    
+    .map-label {
+      position: absolute;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-family: var(--font-mono);
+      pointer-events: none;
+    }
+    
+    .dashboard-table {
+      background: rgba(10, 46, 54, 0.4);
+      border-radius: 8px;
+      border: 1px solid rgba(59, 223, 180, 0.15);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    
+    .table-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: rgba(10, 35, 41, 0.8);
+      padding: 0.75rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: white;
+      font-weight: 600;
+    }
+    
+    .table-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      border-top: 1px solid rgba(59, 223, 180, 0.1);
+      transition: background 0.2s ease;
+    }
+    
+    .table-row:hover {
+      background: rgba(59, 223, 180, 0.1);
+    }
+    
+    .status-complete, 
+    .status-in-progress {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+    }
+    
+    .status-complete {
+      background: rgba(59, 223, 180, 0.2);
+      color: var(--tracingpba-teal);
+      border: 1px solid rgba(59, 223, 180, 0.3);
+    }
+    
+    .status-in-progress {
+      background: rgba(230, 203, 68, 0.2);
+      color: var(--tracingpba-yellow);
+      border: 1px solid rgba(230, 203, 68, 0.3);
+    }
+    
+    .dashboard-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .status-dot.active {
+      background: var(--tracingpba-teal);
+      box-shadow: 0 0 8px rgba(59, 223, 180, 0.7);
+      animation: blink 2s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    
+    .status-text {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .dashboard-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .action-button {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--tracingpba-teal);
+      cursor: pointer;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      background: rgba(59, 223, 180, 0.1);
+      border: 1px solid rgba(59, 223, 180, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .action-button:hover {
+      background: rgba(59, 223, 180, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    /* Efectos de datos */
+    .data-line {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--tracingpba-teal), transparent);
+      opacity: 0.6;
+      z-index: 1;
+    }
+    
+    .line1 {
+      width: 150px;
+      top: 20%;
+      left: -80px;
+      transform: rotate(30deg);
+    }
+    
+    .line2 {
+      width: 120px;
+      bottom: 30%;
+      right: -60px;
+      transform: rotate(-20deg);
+    }
+    
+    .line3 {
+      width: 80px;
+      top: 70%;
+      left: -40px;
+      transform: rotate(-30deg);
+    }
+    
+    .data-node {
+      position: absolute;
+      border-radius: 50%;
+      background-color: var(--tracingpba-teal);
+      box-shadow: 0 0 15px rgba(59, 223, 180, 0.8);
+      z-index: 1;
+    }
+    
+    .node1 {
+      width: 10px;
+      height: 10px;
+      top: 18%;
+      left: -25px;
+      opacity: 0.8;
+      animation: pulse-node 3s infinite alternate;
+    }
+    
+    .node2 {
+      width: 8px;
+      height: 8px;
+      bottom: 25%;
+      right: -20px;
+      opacity: 0.7;
+      animation: pulse-node 2.5s infinite alternate-reverse;
+    }
+    
+    .node3 {
+      width: 12px;
+      height: 12px;
+      top: 60%;
+      left: -30px;
+      opacity: 0.6;
+      animation: pulse-node 4s infinite alternate;
+    }
+    
+    @keyframes pulse-node {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.3);
+        opacity: 0.8;
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .dashboard-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .dashboard-text {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .dashboard-features li {
+        text-align: left;
+      }
+      
+      .dashboard-metrics {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .dashboard-widgets {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .kpi-widget, 
+      .chart-widget, 
+      .map-widget {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+      
+      .widget-chart, 
+      .widget-map {
+        height: 120px;
+      }
+      
+      .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .dashboard-widgets {
+        grid-template-columns: 1fr;
+      }
+      
+      .kpi-widget, 
+      .chart-widget, 
+      .map-widget {
+        grid-column: span 1;
+      }
+      
+      .dashboard-table {
+        overflow-x: auto;
+      }
+      
+      .table-header, 
+      .table-row {
+        min-width: 500px;
+      }
+      
+      .dashboard-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+  </style>

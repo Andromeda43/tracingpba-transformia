@@ -1,0 +1,345 @@
+---
+// Roadmap.astro - Componente para la sección de roadmap y plan futuro
+---
+
+<section class="roadmap-section" id="roadmap">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Roadmap: El futuro de TracingPBA</h2>
+      <p class="section-description animate-on-scroll">
+        Nuestro sistema evoluciona constantemente para ofrecerte más funcionalidades y valor añadido. Conoce las próximas innovaciones que implementaremos en los siguientes trimestres.
+      </p>
+      
+      <div class="roadmap-timeline animate-on-scroll">
+        <div class="timeline-item">
+          <div class="timeline-date">Q3 2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Inventario cuartos fríos (IoT ready)</h3>
+            <p class="timeline-description">
+              Control detallado de productos en cámaras frigoríficas con seguimiento en tiempo real. Sensores de temperatura integrados y alertas automáticas de mantenimiento preventivo.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">IoT</span>
+              <span class="tag">Almacenamiento</span>
+              <span class="tag">Temperatura</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Q4 2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Desposte & despiece con costos por corte</h3>
+            <p class="timeline-description">
+              Seguimiento completo de cada animal desde la entrada hasta el corte final. Cálculo automático de rentabilidad por pieza y optimización de rendimiento en sala de desposte.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Desposte</span>
+              <span class="tag">Costos</span>
+              <span class="tag">Rentabilidad</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Q1 2026</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Motor IA de predicción de insumos y consumibles</h3>
+            <p class="timeline-description">
+              Inteligencia artificial que analiza patrones históricos para predecir necesidades futuras de insumos, optimizar inventarios y reducir costos operativos mediante compras programadas.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">IA</span>
+              <span class="tag">Predicción</span>
+              <span class="tag">Inventario</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Q2 2026</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Módulo documental (POES, PTAR, BPM) con plantillas INVIMA</h3>
+            <p class="timeline-description">
+              Sistema integral de gestión documental con templates pre-aprobados para todos los requisitos regulatorios, control de versiones y alertas de actualización normativa.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Documental</span>
+              <span class="tag">INVIMA</span>
+              <span class="tag">Normativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="roadmap-cta animate-on-scroll">
+        <div class="cta-content">
+          <h3>¿Tienes alguna característica en mente?</h3>
+          <p>Nos encantaría conocer tus necesidades específicas para incluirlas en nuestro plan de desarrollo.</p>
+        </div>
+        <a href="#contacto" class="cybr-btn roadmap-button">
+          Proponer característica
+          <span class="cybr-btn__glitch"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Estilos base de la sección */
+    .roadmap-section {
+      background-color: var(--tracingpba-dark);
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .roadmap-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(59, 223, 180, 0.15) 0%, transparent 70%);
+      z-index: 1;
+    }
+    
+    .section-title {
+      font-family: var(--font-sans);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      color: white;
+      z-index: 2;
+      text-align: center;
+    }
+    
+    .section-description {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Timeline */
+    .roadmap-timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      padding-left: 3rem;
+      z-index: 2;
+    }
+    
+    .roadmap-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--tracingpba-teal), rgba(59, 223, 180, 0.2));
+      z-index: 1;
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 4rem;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .timeline-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -3rem;
+      width: 24px;
+      height: 24px;
+      background-color: var(--tracingpba-dark);
+      border: 3px solid var(--tracingpba-teal);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(59, 223, 180, 0.7);
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover::before {
+      background-color: var(--tracingpba-teal);
+      transform: scale(1.2);
+    }
+    
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--tracingpba-teal);
+      margin-bottom: 1rem;
+    }
+    
+    .timeline-content {
+      background: rgba(10, 46, 54, 0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(59, 223, 180, 0.2);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover .timeline-content {
+      background: rgba(10, 46, 54, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 223, 180, 0.2);
+      border-color: var(--tracingpba-teal);
+    }
+    
+    .timeline-title {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .timeline-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--tracingpba-teal);
+      background: rgba(59, 223, 180, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      border: 1px solid rgba(59, 223, 180, 0.2);
+    }
+    
+    /* CTA Section */
+    .roadmap-cta {
+      background: rgba(10, 46, 54, 0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(59, 223, 180, 0.2);
+      padding: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .roadmap-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 50%, rgba(59, 223, 180, 0.1) 0%, transparent 70%);
+      border-radius: 12px;
+      z-index: -1;
+    }
+    
+    .cta-content {
+      flex: 1;
+    }
+    
+    .cta-content h3 {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    
+    .cta-content p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    .roadmap-button {
+      flex-shrink: 0;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .roadmap-cta {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .timeline-content {
+        padding: 1.5rem;
+      }
+      
+      .timeline-title {
+        font-size: 1.3rem;
+      }
+      
+      .timeline-description {
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .roadmap-timeline {
+        padding-left: 2.5rem;
+      }
+      
+      .timeline-item::before {
+        left: -2.5rem;
+        width: 20px;
+        height: 20px;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .section-description {
+        font-size: 1rem;
+      }
+      
+      .roadmap-cta {
+        padding: 1.5rem;
+      }
+      
+      .cta-content h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>

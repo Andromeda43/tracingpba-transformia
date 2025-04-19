@@ -2,7 +2,7 @@
   "name": "tracingpba-transformia",
   "type": "module",
   "version": "1.0.0",
-  "description": "Sistema de trazabilidad° para plantas de beneficio animal by Transformia",
+  "description": "Sistema de trazabilidad para plantas de beneficio animal by Transformia",
   "author": "Transformia",
   "scripts": {
     "dev": "astro dev",
