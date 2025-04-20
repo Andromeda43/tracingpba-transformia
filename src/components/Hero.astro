@@ -1,75 +1,78 @@
-<!-- Hero.astro - Componente mejorado con animación de proceso y mini-dashboard -->
+<!-- Hero.astro - Componente rediseñado con animación de elementos de trazabilidad -->
 
 <section class="hero-section">
+  <div class="hero-background">
+    <!-- Elementos animados de fondo -->
+    <div class="animated-elements">
+      <!-- Estos elementos serán dinamizados con JS -->
+    </div>
+    
+    <!-- Elementos decorativos fijos -->
+    <div class="grid-background"></div>
+    <div class="scanlines"></div>
+    <div class="glow-circle" style="--size: 500px; --top: 30%; --left: 20%; --color: rgba(66, 255, 209, 0.15);"></div>
+    <div class="glow-circle" style="--size: 350px; --top: 60%; --left: 80%; --color: rgba(176, 66, 255, 0.1);"></div>
+  </div>
+
   <div class="container">
     <div class="hero-content">
-      <div class="hero-text">
+      <div class="hero-text-wrapper">
         <h1 class="hero-title">Trazabilidad inteligente para plantas de beneficio</h1>
         <p class="hero-subtitle">Del campo a la mesa con total transparencia y control en cada etapa del proceso.</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="9" y1="10" x2="15" y2="10"></line>
+                <line x1="12" y1="7" x2="12" y2="13"></line>
+              </svg>
+            </div>
+            <div class="stat-label">Registros procesados</div>
+            <div class="stat-value"><span id="records-counter">0</span>K+</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-label">Horas ahorradas/semana</div>
+            <div class="stat-value"><span id="hours-counter">0</span>h</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <div class="stat-label">Puntos de integración</div>
+            <div class="stat-value"><span id="points-counter">0</span></div>
+          </div>
+        </div>
+        
         <div class="hero-cta">
-          <a href="#contacto" class="cybr-btn">
+          <a href="#contacto" class="primary-button">
             Solicitar Demo
-            <span aria-hidden class="cybr-btn__glitch">Solicitar Demo</span>
+            <span class="button-shine"></span>
           </a>
-          <a href="#modules" class="cybr-btn cybr-btn--secondary">
+          <a href="#modules" class="secondary-button">
             Descubrir Módulos
-            <span aria-hidden class="cybr-btn__glitch">Descubrir Módulos</span>
           </a>
         </div>
-      </div>
-      
-      <div class="hero-visual">
-        <!-- Animación principal del proceso -->
-        <div class="process-animation">
-          <div class="animation-container">
-            <!-- Esta es la animación SVG que se cargará mediante JS -->
-            <div id="animation-element"></div>
-            
-            <!-- Mini dashboard flotante -->
-            <div class="mini-dashboard">
-              <div class="dashboard-header">
-                <div class="dashboard-title">Monitor de Proceso</div>
-                <div class="dashboard-controls">
-                  <span class="control-dot"></span>
-                  <span class="control-dot"></span>
-                  <span class="control-dot"></span>
-                </div>
-              </div>
-              <div class="dashboard-body">
-                <div class="data-row">
-                  <div class="data-label">Animales en proceso:</div>
-                  <div class="data-value" id="animals-in-process">24</div>
-                </div>
-                <div class="data-row">
-                  <div class="data-label">Eficiencia:</div>
-                  <div class="data-value"><span id="efficiency-value">98.2</span>%</div>
-                </div>
-                <div class="data-row">
-                  <div class="data-label">Estado:</div>
-                  <div class="data-value status-active">Activo</div>
-                </div>
-                <div class="data-chart">
-                  <div class="chart-bar" style="--height: 30%"></div>
-                  <div class="chart-bar" style="--height: 45%"></div>
-                  <div class="chart-bar" style="--height: 65%"></div>
-                  <div class="chart-bar" style="--height: 80%"></div>
-                  <div class="chart-bar" style="--height: 60%"></div>
-                  <div class="chart-bar" style="--height: 75%"></div>
-                </div>
-              </div>
-            </div>
+        
+        <div class="hero-badge">
+          <div class="badge-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Trazabilidad de próxima generación</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Elementos decorativos de fondo -->
-  <div class="grid-background"></div>
-  <div class="scanlines"></div>
-  <div class="neon-circle" style="--size: 300px; --top: 20%; --left: 15%; --color: rgba(66, 255, 209, 0.2); --delay: 0s;"></div>
-  <div class="neon-circle" style="--size: 200px; --top: 60%; --left: 75%; --color: rgba(176, 66, 255, 0.15); --delay: 2s;"></div>
-  
+
   <!-- Flecha de scroll -->
   <a href="#modules" class="scroll-arrow">
     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -84,21 +87,34 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
-    padding: 120px 0 80px;
+    padding: 100px 0;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   
   .hero-content {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 10;
+    gap: 2rem;
+    width: 100%;
   }
-  
-  .hero-text {
-    flex: 1;
-    max-width: 500px;
+
+  .hero-text-wrapper {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
     animation: fadeIn 1s ease-out;
   }
   
@@ -121,243 +137,146 @@
     font-family: var(--font-sans);
   }
   
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .hero-visual {
-    flex: 1;
-    position: relative;
-  }
-  
-  .process-animation {
-    position: relative;
-    width: 100%;
-    height: 500px;
-  }
-  
-  .animation-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Estilos para asegurar que la animación se muestre correctamente */
-  #animation-element {
-    width: 100%;
-    height: 100%;
+  .hero-stats {
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-
-  #animation-element svg {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   
-  /* Mini dashboard */
-  .mini-dashboard {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 280px;
-    background: rgba(10, 10, 20, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(66, 255, 209, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(66, 255, 209, 0.1);
-    z-index: 20;
-    animation: fadeIn 1s ease-out 0.5s both;
-    overflow: hidden;
-  }
-  
-  .dashboard-header {
+  .stat-item {
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 12px 15px;
-    background: rgba(26, 26, 64, 0.8);
-    border-bottom: 1px solid rgba(66, 255, 209, 0.2);
+    gap: 0.5rem;
   }
   
-  .dashboard-title {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
+  .stat-icon {
     color: var(--tracingpba-teal);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .dashboard-controls {
+    height: 40px;
+    width: 40px;
     display: flex;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
   }
   
-  .control-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--tracingpba-teal);
+    margin-top: 0.25rem;
+    line-height: 1;
   }
   
-  .control-dot:first-child {
-    background-color: var(--tracingpba-teal);
-    box-shadow: 0 0 5px var(--tracingpba-teal);
-  }
-  
-  .dashboard-body {
-    padding: 15px;
-  }
-  
-  .data-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 0.8rem;
-  }
-  
-  .data-label {
+  .stat-label {
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
     font-family: var(--font-mono);
   }
   
-  .data-value {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    color: white;
-  }
-  
-  .status-active {
-    color: var(--tracingpba-teal);
-    position: relative;
-  }
-  
-  .status-active::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: var(--tracingpba-teal);
-    border-radius: 50%;
-    margin-right: 5px;
-    animation: blink 2s infinite;
-  }
-  
-  .data-chart {
-    display: flex;
-    align-items: flex-end;
-    height: 50px;
-    gap: 4px;
-    margin-top: 15px;
-  }
-  
-  .chart-bar {
-    flex: 1;
-    height: var(--height);
-    background: linear-gradient(to top, var(--tracingpba-teal), rgba(66, 255, 209, 0.3));
-    border-radius: 2px 2px 0 0;
-  }
-
-  /* Fallback animation */
-  .fallback-animation {
-    width: 100%;
-    height: 100%;
+  .hero-cta {
     display: flex;
     justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .primary-button {
+    position: relative;
+    background: linear-gradient(90deg, rgba(66, 255, 209, 0.8), rgba(66, 255, 209, 0.6));
+    color: #0a2e36;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(66, 255, 209, 0.4);
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(66, 255, 209, 0.5);
+  }
+  
+  .button-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    20%, 100% {
+      left: 100%;
+    }
+  }
+  
+  .secondary-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(66, 255, 209, 0.3);
+    color: var(--tracingpba-teal);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .secondary-button:hover {
+    background: rgba(66, 255, 209, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .hero-badge {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .badge-item {
+    display: flex;
     align-items: center;
-  }
-
-  .fallback-animation img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  @media (max-width: 1100px) {
-    .hero-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .hero-text {
-      max-width: 700px;
-      margin-bottom: 3rem;
-    }
-    
-    .hero-cta {
-      justify-content: center;
-    }
-    
-    .process-animation {
-      height: 400px;
-    }
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
   }
   
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.1rem;
-    }
-    
-    .process-animation {
-      height: 350px;
-    }
-    
-    .mini-dashboard {
-      width: 240px;
-      bottom: 20px;
-      right: 20px;
-    }
+  .badge-item svg {
+    color: var(--tracingpba-teal);
   }
   
-  @media (max-width: 576px) {
-    .hero-section {
-      padding: 100px 0 60px;
-    }
-    
-    .hero-title {
-      font-size: 2rem;
-    }
-    
-    .process-animation {
-      height: 300px;
-    }
-    
-    .mini-dashboard {
-      width: 200px;
-      bottom: 10px;
-      right: 10px;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-
-  /* Elementos decorativos */
+  /* Elementos de fondo */
   .grid-background {
     position: absolute;
     top: 0;
@@ -396,7 +315,7 @@
     z-index: 2;
   }
 
-  .neon-circle {
+  .glow-circle {
     position: absolute;
     width: var(--size);
     height: var(--size);
@@ -404,21 +323,19 @@
     top: var(--top);
     left: var(--left);
     background: var(--color);
-    filter: blur(60px);
+    filter: blur(80px);
     z-index: 1;
-    animation: pulse 8s ease-in-out infinite;
-    animation-delay: var(--delay);
+    animation: pulse 10s ease-in-out infinite alternate;
   }
 
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 0.8;
-    }
-    50% {
-      transform: scale(1.1);
-      opacity: 1;
-    }
+  .animated-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
   }
 
   .scroll-arrow {
@@ -448,148 +365,450 @@
       transform: translateY(-5px) translateX(-50%);
     }
   }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1100px) {
+    .hero-content {
+      text-align: center;
+    }
+    
+    .hero-text-wrapper {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+      gap: 1.5rem;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+    }
+    
+    .primary-button, .secondary-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-section {
+      padding: 80px 0 60px;
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
 </style>
 
 <script>
-  // Cargar script de Lottie
+  // Define interfaces para TypeScript
+  interface AnimatedElementOptions {
+    size?: number;
+    speed?: number;
+    rotation?: number;
+    delay?: number;
+    startX?: number;
+    startY?: number;
+    opacity?: number;
+    animation?: string;
+    [key: string]: any;
+  }
+
+  // Clase para manejar los elementos de animación
+  class AnimatedElement {
+    type: string;
+    options: AnimatedElementOptions;
+    element: HTMLElement;
+
+    constructor(type: string, options: AnimatedElementOptions = {}) {
+      this.type = type;
+      this.options = {
+        size: options.size || Math.random() * 40 + 20,
+        speed: options.speed || Math.random() * 5 + 2,
+        rotation: options.rotation || Math.random() * 360,
+        delay: options.delay || Math.random() * 5,
+        startX: options.startX || Math.random() * 100,
+        startY: options.startY || -10 - Math.random() * 10,
+        opacity: options.opacity || Math.random() * 0.3 + 0.1,
+        animation: options.animation || 'linear',
+        ...options
+      };
+      this.element = this.createElementByType();
+      this.init();
+    }
+    
+    createElementByType(): HTMLElement {
+      const el = document.createElement('div');
+      el.classList.add('animated-item', `item-${this.type}`);
+      
+      // Dependiendo del tipo, crear diferentes elementos
+      switch(this.type) {
+        case 'cow':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(66, 255, 209, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4Z"></path>
+            <path d="M20 3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4Z"></path>
+            <path d="M5 11v4a7 7 0 0 0 7 7v0a7 7 0 0 0 7-7v-4"></path>
+            <line x1="8" y1="15" x2="10" y2="15"></line>
+            <line x1="14" y1="15" x2="16" y2="15"></line>
+          </svg>`;
+          break;
+        case 'pig':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 66, 114, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"></path>
+            <path d="M8 11v.01M16 11v.01"></path>
+            <path d="M2 12h1M4 9h1M4 15h1M6 6.8l.7.7M6 17.2l.7-.7"></path>
+            <path d="M12 5c-1.107-.72-2.435-1-4-1-1.567 0-2.893.28-4 1"></path>
+            <path d="M15 8a1 1 0 0 1 0 2 1 1 0 0 1 0-2zM9 8a1 1 0 0 1 0 2 1 1 0 0 1 0-2z"></path>
+            <path d="M12 16v.01"></path>
+          </svg>`;
+          break;
+        case 'dataflow':
+          el.innerHTML = `<svg width="${this.options.size ? this.options.size * 1.5 : 30}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(66, 255, 209, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="4" height="4" rx="1"></rect>
+            <rect x="2" y="10" width="4" height="4" rx="1"></rect>
+            <rect x="2" y="18" width="4" height="4" rx="1"></rect>
+            <rect x="10" y="2" width="4" height="4" rx="1"></rect>
+            <rect x="10" y="10" width="4" height="4" rx="1"></rect>
+            <rect x="10" y="18" width="4" height="4" rx="1"></rect>
+            <rect x="18" y="2" width="4" height="4" rx="1"></rect>
+            <rect x="18" y="10" width="4" height="4" rx="1"></rect>
+            <rect x="18" y="18" width="4" height="4" rx="1"></rect>
+            <path d="M6 4h4"></path>
+            <path d="M14 4h4"></path>
+            <path d="M6 12h4"></path>
+            <path d="M14 12h4"></path>
+            <path d="M6 20h4"></path>
+            <path d="M14 20h4"></path>
+            <path d="M4 6v4"></path>
+            <path d="M4 14v4"></path>
+            <path d="M12 6v4"></path>
+            <path d="M12 14v4"></path>
+            <path d="M20 6v4"></path>
+            <path d="M20 14v4"></path>
+          </svg>`;
+          break;
+        case 'tag':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(176, 66, 255, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
+            <path d="M7 7h.01"></path>
+          </svg>`;
+          break;
+        case 'barcode':
+          el.innerHTML = `<svg width="${this.options.size ? this.options.size * 1.5 : 30}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 5v14"></path>
+            <path d="M8 5v14"></path>
+            <path d="M12 5v14"></path>
+            <path d="M17 5v14"></path>
+            <path d="M21 5v14"></path>
+          </svg>`;
+          break;
+        case 'node':
+          el.style.width = `${this.options.size}px`;
+          el.style.height = `${this.options.size}px`;
+          el.style.backgroundColor = `rgba(66, 255, 209, ${this.options.opacity})`;
+          el.style.borderRadius = '50%';
+          // Corregir el error de objeto posiblemente undefined
+          const shadowSize = this.options.size ? this.options.size / 2 : 10;
+          el.style.boxShadow = `0 0 ${shadowSize}px rgba(66, 255, 209, ${this.options.opacity})`;
+          break;
+        case 'branding-iron':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 160, 66, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="14" cy="6" r="4"></circle>
+            <path d="M14 10v8"></path>
+            <path d="M10 14h8"></path>
+            <path d="M16 18v2"></path>
+            <path d="M8 6h.01"></path>
+          </svg>`;
+          break;
+        case 'bull':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 120, 66, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 7h10"></path>
+            <path d="M12 7h10"></path>
+            <path d="M7 2l.5 5"></path>
+            <path d="M17 2l-.5 5"></path>
+            <path d="M7 14c.64 1.26 1.7 2 3 2h4c1.3 0 2.36-.74 3-2"></path>
+            <path d="M5 18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4H5v4z"></path>
+          </svg>`;
+          break;
+        case 'chart':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(66, 200, 255, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+            <line x1="7" y1="15" x2="8" y2="15"></line>
+            <line x1="14" y1="15" x2="16" y2="15"></line>
+            <line x1="7" y1="18" x2="8" y2="18"></line>
+            <line x1="14" y1="18" x2="16" y2="18"></line>
+          </svg>`;
+          break;
+        case 'gauge':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 66, 200, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"></path>
+            <path d="M12 12 7 7"></path>
+            <path d="M12 12v5"></path>
+          </svg>`;
+          break;
+        case 'stethoscope':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(130, 255, 66, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.7 19.3a9 9 0 1 1 14.6 0"></path>
+            <path d="M4 15.24A7 7 0 0 1 3 12c0-3.87 3.13-7 7-7h4c3.87 0 7 3.13 7 7a7 7 0 0 1-1 3.24"></path>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12" y2="16"></line>
+          </svg>`;
+          break;
+        case 'syringe':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(66, 255, 150, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m14 16-4-4"></path>
+            <path d="m4 6 14 14"></path>
+            <path d="m11.5 13.5 1 1"></path>
+            <path d="m10 7 5 5"></path>
+            <path d="m9 6 6 6"></path>
+            <path d="m13 14-1.5-1.5"></path>
+            <path d="M4 18h.01"></path>
+          </svg>`;
+          break;
+        case 'thermometer':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 66, 87, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+            <path d="M12 9a1 1 0 0 0-1 1v6.54a1 1 0 0 0 2 0V10a1 1 0 0 0-1-1Z"></path>
+          </svg>`;
+          break;
+        case 'scales':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(220, 255, 66, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 7 3-3 3 3"></path>
+            <path d="M6 4v6"></path>
+            <path d="m15 7 3-3 3 3"></path>
+            <path d="M18 4v6"></path>
+            <path d="M3 17h18"></path>
+            <path d="M6 17v3"></path>
+            <path d="M18 17v3"></path>
+          </svg>`;
+          break;
+        case 'farm':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(167, 146, 94, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            <path d="M5 8a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1H5V8z"></path>
+          </svg>`;
+          break;
+        case 'dashboard':
+          el.innerHTML = `<svg width="${this.options.size}" height="${this.options.size}" viewBox="0 0 24 24" fill="none" stroke="rgba(66, 255, 209, ${this.options.opacity})" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>`;
+          break;
+        default:
+          el.style.width = `${this.options.size}px`;
+          el.style.height = `${this.options.size}px`;
+          el.style.backgroundColor = `rgba(66, 255, 209, ${this.options.opacity})`;
+      }
+      
+      return el;
+    }
+    
+    init(): void {
+      const container = document.querySelector('.animated-elements');
+      if (!container) return;
+      
+      this.element.style.position = 'absolute';
+      this.element.style.left = `${this.options.startX}%`;
+      this.element.style.top = `${this.options.startY}%`;
+      this.element.style.transform = `rotate(${this.options.rotation}deg)`;
+      this.element.style.opacity = `${this.options.opacity}`;
+      
+      // Establecer la animación
+      this.element.style.transition = `top ${this.options.speed}s ${this.options.animation}, left ${this.options.speed}s ${this.options.animation}, transform ${this.options.speed}s ${this.options.animation}`;
+      
+      container.appendChild(this.element);
+      
+      // Iniciar la animación después de un breve delay para permitir que la transición funcione
+      setTimeout(() => {
+        this.animate();
+      }, (this.options.delay || 0) * 1000);
+    }
+    
+    animate(): void {
+      // Crear diferentes patrones de movimiento para mayor variedad visual
+      // Algunos elementos van directo hacia abajo, otros en diagonal, etc.
+      let newY, newX, newRotation;
+      
+      // Patrón aleatorio de movimiento (3 tipos)
+      const motionPattern = Math.floor(Math.random() * 3);
+      
+      switch(motionPattern) {
+        case 0: // Diagonal hacia abajo-izquierda (como tembo)
+          newY = 110 + Math.random() * 20;
+          newX = (this.options.startX || 0) - (Math.random() * 60) - 10;
+          newRotation = (this.options.rotation || 0) + (Math.random() * 180 - 90);
+          break;
+        case 1: // Diagonal hacia abajo-derecha
+          newY = 110 + Math.random() * 20;
+          newX = (this.options.startX || 0) + (Math.random() * 60) - 10;
+          newRotation = (this.options.rotation || 0) + (Math.random() * 180 - 90);
+          break;
+        case 2: // Directo hacia abajo (caída)
+          newY = 110 + Math.random() * 20;
+          newX = (this.options.startX || 0) + (Math.random() * 10 - 5); // Ligera variación horizontal
+          newRotation = (this.options.rotation || 0) + (Math.random() * 90 - 45); // Menos rotación
+          break;
+      }
+      
+      this.element.style.top = `${newY}%`;
+      this.element.style.left = `${newX}%`;
+      this.element.style.transform = `rotate(${newRotation}deg)`;
+      
+      // Cuando la animación termine, eliminar y recrear
+      setTimeout(() => {
+        this.element.remove();
+        // Variar la posición de inicio para distribución por toda la pantalla
+        this.options.startY = -10 - Math.random() * 10;
+        this.options.startX = Math.random() * 100;
+        this.options.rotation = Math.random() * 360;
+        this.element = this.createElementByType();
+        this.init();
+      }, (this.options.speed || 3) * 1000);
+    }
+  }
+  
+  // Inicializar todo cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
-    script.onload = initAnimation;
-    document.head.appendChild(script);
+    // Crear elementos animados - tipos ampliados
+    const types = [
+      'cow', 'pig', 'dataflow', 'tag', 'barcode', 'node', 
+      'branding-iron', 'bull', 'chart', 'gauge', 'stethoscope', 
+      'syringe', 'thermometer', 'scales', 'farm', 'dashboard'
+    ];
+    const elementCount = window.innerWidth < 768 ? 30 : 60; // Aumentado significativamente el número de elementos
+    
+    for (let i = 0; i < elementCount; i++) {
+      const randomType = types[Math.floor(Math.random() * types.length)];
+      
+      // Variar el tamaño según el tipo para elementos más interesantes
+      let size, opacity, speed;
+      
+      // Personalizar tamaños y velocidades según el tipo
+      switch(randomType) {
+        case 'bull':
+        case 'cow':
+          size = Math.random() * 35 + 25; // Animales más grandes
+          opacity = Math.random() * 0.3 + 0.15;
+          speed = Math.random() * 6 + 6; // Más lentos
+          break;
+        case 'branding-iron':
+          size = Math.random() * 25 + 20;
+          opacity = Math.random() * 0.4 + 0.2;
+          speed = Math.random() * 7 + 5;
+          break;
+        case 'dashboard':
+        case 'chart':
+          size = Math.random() * 40 + 30; // Elementos de dashboard más grandes
+          opacity = Math.random() * 0.35 + 0.15;
+          speed = Math.random() * 5 + 4;
+          break;
+        case 'stethoscope':
+        case 'syringe':
+        case 'thermometer':
+          size = Math.random() * 25 + 15; // Instrumentos médicos
+          opacity = Math.random() * 0.3 + 0.2;
+          speed = Math.random() * 6 + 5;
+          break;
+        default:
+          size = Math.random() * 30 + 15;
+          opacity = Math.random() * 0.3 + 0.1;
+          speed = Math.random() * 8 + 4;
+      }
+      
+      new AnimatedElement(randomType, {
+        size: size,
+        speed: speed,
+        opacity: opacity,
+        delay: Math.random() * 15 // Mayor variación en el delay para distribución más natural
+      });
+    }
+    
+    // Animación de contadores - con valores fijos y límites
+    function animateCounter(elementId: string, targetValue: number, duration = 2000): void {
+      const element = document.getElementById(elementId);
+      if (!element) return;
+      
+      const startValue = 0;
+      const increment = 1;
+      const stepTime = Math.abs(Math.floor(duration / (targetValue - startValue)));
+      
+      let currentValue = startValue;
+      const timer = setInterval(() => {
+        currentValue += increment;
+        element.textContent = currentValue.toString();
+        if (currentValue >= targetValue) {
+          element.textContent = targetValue.toString();
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+    
+    // Iniciar animaciones de contadores con un ligero retraso
+    setTimeout(() => {
+      // Usar valores objetivos no porcentuales
+      animateCounter('records-counter', 100, 1500); // Miles de registros procesados
+      animateCounter('hours-counter', 36, 1500);   // Horas ahorradas por semana
+      animateCounter('points-counter', 8, 1500);   // Puntos de integración
+    }, 500);
+    
+    // Animación al hacer scroll
+    const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.glow-circle');
+      
+      parallaxElements.forEach(el => {
+        const speed = 0.05;
+        const yPos = -scrollY * speed;
+        if (el instanceof HTMLElement) {
+          el.style.transform = `translateY(${yPos}px)`;
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
   });
-
-  // Inicializar la animación cuando el script esté cargado
-  function initAnimation() {
-    const animationContainer = document.getElementById('animation-element');
-    
-    if (animationContainer && window.lottie) {
-      // Esta es la configuración para cargar la animación JSON
-      const animation = window.lottie.loadAnimation({
-        container: animationContainer,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/animations/process-animation.json', // Asegúrate que esta ruta sea correcta
-      });
-      
-      // Configuración adicional para mejorar el rendimiento
-      animation.setSubframe(false);
-      
-      // Fallback en caso de que la animación no cargue
-      animation.addEventListener('data_failed', () => {
-        console.warn('La animación falló al cargar. Mostrando imagen estática como respaldo.');
-        if (animationContainer) {
-          animationContainer.innerHTML = `
-            <div class="fallback-animation">
-              <img src="/images/process-static.svg" alt="Proceso de trazabilidad" />
-              <p>Visualización del proceso de trazabilidad</p>
-            </div>
-          `;
-        }
-      });
-      
-      // Optimización: pausa la animación cuando no es visible
-      if (window.IntersectionObserver) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animation.play();
-            } else {
-              animation.pause();
-            }
-          });
-        }, { threshold: 0.1 });
-        
-        observer.observe(animationContainer);
-      }
-      
-      // Agregar mensaje de carga mientras se procesa la animación
-      animationContainer.insertAdjacentHTML('beforeend', `
-        <div id="animation-loading" style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: var(--tracingpba-teal);
-          font-family: var(--font-mono);
-          font-size: 0.9rem;
-          text-align: center;
-        ">
-          <div style="margin-bottom: 10px;">Cargando visualización</div>
-          <div class="loading-dots">
-            <span style="animation-delay: 0s;">.</span>
-            <span style="animation-delay: 0.2s;">.</span>
-            <span style="animation-delay: 0.4s;">.</span>
-          </div>
-        </div>
-      `);
-      
-      // Eliminar el mensaje de carga cuando la animación esté lista
-      animation.addEventListener('DOMLoaded', () => {
-        const loadingEl = document.getElementById('animation-loading');
-        if (loadingEl) {
-          loadingEl.style.opacity = '0';
-          setTimeout(() => {
-            loadingEl.remove();
-          }, 500);
-        }
-      });
-    }
-    
-    // Animación de datos para el mini dashboard
-    initDashboardAnimation();
-  }
-
-  // Inicializar animación del dashboard
-  function initDashboardAnimation() {
-    let currentAnimals = 18;
-    const maxAnimals = 30;
-    const minAnimals = 12;
-    const animalsElement = document.getElementById('animals-in-process');
-    const efficiencyElement = document.getElementById('efficiency-value');
-    
-    // Actualizar valores periódicamente para dar sensación de datos en vivo
-    setInterval(() => {
-      if (Math.random() > 0.5) {
-        currentAnimals = Math.min(currentAnimals + Math.floor(Math.random() * 3), maxAnimals);
-      } else {
-        currentAnimals = Math.max(currentAnimals - Math.floor(Math.random() * 3), minAnimals);
-      }
-      
-      if (animalsElement) {
-        animalsElement.textContent = currentAnimals.toString();
-      }
-      
-      if (efficiencyElement) {
-        const efficiency = (97 + Math.random() * 2).toFixed(1);
-        efficiencyElement.textContent = efficiency.toString();
-      }
-      
-      // Actualizar las barras del gráfico
-      const chartBars = document.querySelectorAll('.chart-bar');
-      chartBars.forEach(bar => {
-        const newHeight = 30 + Math.random() * 60;
-        bar.style.setProperty('--height', `${newHeight}%`);
-      });
-    }, 3000);
-  }
-
-  // Agregar algunos estilos dinámicos para las animaciones de carga
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes loadingDots {
-      0%, 80%, 100% { opacity: 0; transform: scale(0.8); }
-      40% { opacity: 1; transform: scale(1); }
-    }
-    
-    .loading-dots span {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      animation: loadingDots 1.4s infinite ease-in-out both;
-    }
-  `;
-  document.head.appendChild(style);
-</script>
+</script> 
