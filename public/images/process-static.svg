@@ -1,75 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <!-- Fondo -->
-  <rect width="800" height="500" fill="#0A2E36" opacity="0.8"/>
+  <rect width="800" height="500" fill="#071C20" opacity="0.8" />
   
-  <!-- Cuadrícula de fondo -->
-  <g opacity="0.2">
-    <line x1="0" y1="100" x2="800" y2="100" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="0" y1="200" x2="800" y2="200" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="0" y1="300" x2="800" y2="300" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="0" y1="400" x2="800" y2="400" stroke="#42FFD1" stroke-width="1"/>
+  <!-- Líneas de cuadrícula -->
+  <g opacity="0.3">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#2AFFD1" stroke-width="1" />
     
-    <line x1="100" y1="0" x2="100" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="200" y1="0" x2="200" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="300" y1="0" x2="300" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="400" y1="0" x2="400" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="500" y1="0" x2="500" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="600" y1="0" x2="600" y2="500" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="700" y1="0" x2="700" y2="500" stroke="#42FFD1" stroke-width="1"/>
+    <line x1="160" y1="0" x2="160" y2="500" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="320" y1="0" x2="320" y2="500" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="480" y1="0" x2="480" y2="500" stroke="#2AFFD1" stroke-width="1" />
+    <line x1="640" y1="0" x2="640" y2="500" stroke="#2AFFD1" stroke-width="1" />
   </g>
-
+  
+  <!-- Área de procesamiento -->
+  <rect x="250" y="170" width="300" height="160" rx="20" ry="20" fill="#071C20" opacity="0.4" stroke="#2AFFD1" stroke-width="2" />
+  <rect x="250" y="155" width="300" height="40" fill="#071C20" opacity="1" />
+  <rect x="340" y="165" width="120" height="20" fill="#2AFFD1" opacity="0.2" />
+  <text x="400" y="180" font-family="monospace" font-size="12" fill="#2AFFD1" text-anchor="middle">PROCESAMIENTO</text>
+  
   <!-- Área de entrada -->
-  <g>
-    <rect x="130" y="200" width="100" height="100" rx="15" fill="#1A142D" stroke="#B042FF" stroke-width="2"/>
-    <text x="180" y="180" fill="#B042FF" font-family="'Space Mono', monospace" font-size="16" text-anchor="middle">ENTRADA</text>
-  </g>
-
-  <!-- Área de proceso -->
-  <g>
-    <rect x="250" y="170" width="300" height="160" rx="20" fill="rgba(10, 46, 54, 0.6)" stroke="#42FFD1" stroke-width="2"/>
-    <text x="400" y="150" fill="#42FFD1" font-family="'Space Mono', monospace" font-size="18" text-anchor="middle">PROCESAMIENTO</text>
-    
-    <!-- Líneas de escaneo -->
-    <line x1="300" y1="210" x2="500" y2="210" stroke="#42FFD1" stroke-width="2" opacity="0.7"/>
-    <line x1="300" y1="250" x2="500" y2="250" stroke="#42FFD1" stroke-width="2" opacity="0.5"/>
-    <line x1="300" y1="290" x2="500" y2="290" stroke="#42FFD1" stroke-width="2" opacity="0.3"/>
-  </g>
-
+  <rect x="80" y="200" width="100" height="100" rx="15" ry="15" fill="#1A142E" opacity="0.6" stroke="#B042FF" stroke-width="2" />
+  <ellipse cx="130" cy="250" rx="20" ry="15" fill="#B042FF" opacity="0.6" stroke="#B042FF" stroke-width="2" />
+  <rect x="80" y="185" width="100" height="30" fill="#1A142E" opacity="1" />
+  <rect x="95" y="190" width="70" height="16" fill="#B042FF" opacity="0.2" />
+  <text x="130" y="203" font-family="monospace" font-size="10" fill="#B042FF" text-anchor="middle">ENTRADA</text>
+  
   <!-- Área de salida -->
-  <g>
-    <rect x="570" y="200" width="100" height="100" rx="15" fill="rgba(24, 15, 5, 0.6)" stroke="#FFA942" stroke-width="2"/>
-    <text x="620" y="180" fill="#FFA942" font-family="'Space Mono', monospace" font-size="16" text-anchor="middle">SALIDA</text>
-  </g>
-
-  <!-- Conexiones -->
-  <line x1="230" y1="250" x2="250" y2="250" stroke="#42FFD1" stroke-width="4" stroke-linecap="round"/>
-  <line x1="550" y1="250" x2="570" y2="250" stroke="#42FFD1" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Animal (entrada) -->
-  <g>
-    <ellipse cx="165" cy="250" rx="20" ry="15" fill="#B042FF" opacity="0.8" stroke="#B042FF" stroke-width="1"/>
-    <circle cx="150" cy="240" r="7.5" fill="#B042FF" opacity="0.9" stroke="#B042FF" stroke-width="1"/>
-  </g>
-
-  <!-- Producto (salida) -->
-  <g>
-    <rect x="605" y="235" width="30" height="35" rx="3" fill="#FFA942" opacity="0.8" stroke="#FFA942" stroke-width="1.5"/>
-    <!-- Etiquetas -->
-    <line x1="592.5" y1="243" x2="617.5" y2="243" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="592.5" y1="247" x2="617.5" y2="247" stroke="#42FFD1" stroke-width="1"/>
-    <line x1="592.5" y1="251" x2="617.5" y2="251" stroke="#42FFD1" stroke-width="1"/>
-  </g>
-
+  <rect x="620" y="200" width="100" height="100" rx="15" ry="15" fill="#2E1D0A" opacity="0.6" stroke="#FFA842" stroke-width="2" />
+  <rect x="655" y="232.5" width="30" height="35" rx="3" ry="3" fill="#FFA842" opacity="0.6" stroke="#FFA842" stroke-width="2" />
+  <rect x="620" y="185" width="100" height="30" fill="#2E1D0A" opacity="1" />
+  <rect x="645" y="190" width="50" height="16" fill="#FFA842" opacity="0.2" />
+  <text x="670" y="203" font-family="monospace" font-size="10" fill="#FFA842" text-anchor="middle">SALIDA</text>
+  
+  <!-- Líneas de conexión -->
+  <line x1="180" y1="250" x2="250" y2="250" stroke="#2AFFD1" stroke-width="4" opacity="0.8" />
+  <line x1="550" y1="250" x2="620" y2="250" stroke="#2AFFD1" stroke-width="4" opacity="0.8" />
+  
+  <!-- Scan lines -->
+  <line x1="300" y1="220" x2="500" y2="220" stroke="#2AFFD1" stroke-width="2" opacity="0.6" />
+  <line x1="300" y1="250" x2="500" y2="250" stroke="#2AFFD1" stroke-width="2" opacity="0.4" />
+  <line x1="300" y1="280" x2="500" y2="280" stroke="#2AFFD1" stroke-width="2" opacity="0.6" />
+  
   <!-- Partículas de datos -->
-  <circle cx="290" cy="230" r="2.5" fill="#42FFD1" opacity="0.8"/>
-  <circle cx="330" cy="270" r="2.5" fill="#42FFD1" opacity="0.8"/>
-  <circle cx="370" cy="250" r="2.5" fill="#42FFD1" opacity="0.8"/>
-  <circle cx="410" cy="230" r="2.5" fill="#42FFD1" opacity="0.8"/>
-  <circle cx="450" cy="270" r="2.5" fill="#42FFD1" opacity="0.8"/>
-  <circle cx="490" cy="250" r="2.5" fill="#42FFD1" opacity="0.8"/>
-
-  <!-- Círculos de neón (efectos de fondo) -->
-  <circle cx="120" cy="100" r="150" fill="#42FFD1" opacity="0.05" filter="blur(50px)"/>
-  <circle cx="600" cy="400" r="100" fill="#B042FF" opacity="0.05" filter="blur(40px)"/>
+  <circle cx="350" cy="230" r="2.5" fill="#2AFFD1" opacity="0.8" />
+  <circle cx="400" cy="270" r="2.5" fill="#2AFFD1" opacity="0.8" />
+  <circle cx="450" cy="250" r="2.5" fill="#2AFFD1" opacity="0.8" />
+  
+  <!-- Efectos de brillo -->
+  <circle cx="400" cy="250" r="150" fill="#2AFFD1" opacity="0.05" />
+  <circle cx="130" cy="250" r="100" fill="#B042FF" opacity="0.05" />
+  <circle cx="670" cy="250" r="100" fill="#FFA842" opacity="0.05" />
 </svg>

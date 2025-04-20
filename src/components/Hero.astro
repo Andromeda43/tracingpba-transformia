@@ -143,6 +143,22 @@
     width: 100%;
     height: 100%;
   }
+
+  /* Estilos para asegurar que la animación se muestre correctamente */
+  #animation-element {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #animation-element svg {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
   
   /* Mini dashboard */
   .mini-dashboard {
@@ -246,6 +262,20 @@
     background: linear-gradient(to top, var(--tracingpba-teal), rgba(66, 255, 209, 0.3));
     border-radius: 2px 2px 0 0;
   }
+
+  /* Fallback animation */
+  .fallback-animation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fallback-animation img {
+    max-width: 100%;
+    max-height: 100%;
+  }
   
   @media (max-width: 1100px) {
     .hero-content {
@@ -326,6 +356,98 @@
       opacity: 0.5;
     }
   }
+
+  /* Elementos decorativos */
+  .grid-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(to right, rgba(66, 255, 209, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(66, 255, 209, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+  }
+
+  .scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 51%
+    );
+    background-size: 100% 4px;
+    z-index: 2;
+  }
+
+  .neon-circle {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    top: var(--top);
+    left: var(--left);
+    background: var(--color);
+    filter: blur(60px);
+    z-index: 1;
+    animation: pulse 8s ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  .scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--tracingpba-teal);
+    animation: bounce 2s infinite;
+    z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  .scroll-arrow:hover {
+    opacity: 1;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    40% {
+      transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+      transform: translateY(-5px) translateX(-50%);
+    }
+  }
 </style>
 
 <script>
@@ -348,8 +470,11 @@
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '/animations/process-animation.json',
+        path: '/animations/process-animation.json', // Asegúrate que esta ruta sea correcta
       });
+      
+      // Configuración adicional para mejorar el rendimiento
+      animation.setSubframe(false);
       
       // Fallback en caso de que la animación no cargue
       animation.addEventListener('data_failed', () => {
@@ -358,6 +483,7 @@
           animationContainer.innerHTML = `
             <div class="fallback-animation">
               <img src="/images/process-static.svg" alt="Proceso de trazabilidad" />
+              <p>Visualización del proceso de trazabilidad</p>
             </div>
           `;
         }
@@ -377,6 +503,38 @@
         
         observer.observe(animationContainer);
       }
+      
+      // Agregar mensaje de carga mientras se procesa la animación
+      animationContainer.insertAdjacentHTML('beforeend', `
+        <div id="animation-loading" style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--tracingpba-teal);
+          font-family: var(--font-mono);
+          font-size: 0.9rem;
+          text-align: center;
+        ">
+          <div style="margin-bottom: 10px;">Cargando visualización</div>
+          <div class="loading-dots">
+            <span style="animation-delay: 0s;">.</span>
+            <span style="animation-delay: 0.2s;">.</span>
+            <span style="animation-delay: 0.4s;">.</span>
+          </div>
+        </div>
+      `);
+      
+      // Eliminar el mensaje de carga cuando la animación esté lista
+      animation.addEventListener('DOMLoaded', () => {
+        const loadingEl = document.getElementById('animation-loading');
+        if (loadingEl) {
+          loadingEl.style.opacity = '0';
+          setTimeout(() => {
+            loadingEl.remove();
+          }, 500);
+        }
+      });
     }
     
     // Animación de datos para el mini dashboard
@@ -416,4 +574,22 @@
       });
     }, 3000);
   }
+
+  // Agregar algunos estilos dinámicos para las animaciones de carga
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes loadingDots {
+      0%, 80%, 100% { opacity: 0; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+    
+    .loading-dots span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: loadingDots 1.4s infinite ease-in-out both;
+    }
+  `;
+  document.head.appendChild(style);
 </script>
