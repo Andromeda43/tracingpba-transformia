@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+public/videos/checkpoints.mp4
+public/videos/decomisos.mp4
+public/videos/despacho.mp4
+public/videos/pdf.mp4
+public/videos/precintos.mp4
+public/videos/precintosmaquila.mp4
+public/videos/recepcion.mp4
+.gitignore

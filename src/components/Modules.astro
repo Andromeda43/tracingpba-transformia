@@ -1,403 +1,906 @@
 ---
-// Modules.astro - Componente para mostrar los módulos del sistema
+// ModulesCarousel.astro - Componente de carrusel para mostrar los módulos del sistema
 ---
 
 <section class="modules-section" id="modules">
-    <div class="container">
-      <h2 class="section-title animate-on-scroll">Módulos Actuales</h2>
-      <p class="section-description animate-on-scroll">
-        TracingPBA ofrece un sistema completo que cubre todo el proceso de trazabilidad en plantas de beneficio animal, desde la recepción hasta la entrega, cumpliendo con todas las normativas INVIMA.
-      </p>
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Módulos Actuales</h2>
+    <p class="section-description animate-on-scroll">
+      TracingPBA ofrece un sistema completo que cubre todo el proceso de trazabilidad en plantas de beneficio animal, desde la recepción hasta la entrega, cumpliendo con todas las normativas INVIMA.
+    </p>
+    
+    <div class="modules-carousel animate-on-scroll">
+      <!-- Botones de navegación fuera del contenedor -->
+      <button class="carousel-control prev-slide" aria-label="Anterior módulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
       
-      <div class="modules-grid">
-        <!-- Módulo 1: Recepción SINIGAN -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
-              <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
-              <path d="M15 14h6"></path>
-            </svg>
+      <!-- Carrusel de Módulos -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Slide 1: Recepción SINIGAN -->
+          <div class="carousel-slide" data-slide="0">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/recepcion.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                    <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                    <path d="M15 14h6"></path>
+                  </svg>
+                </div>
+                <h3 class="module-title">Recepción SINIGAN Scraper</h3>
+                <div class="module-headline">De la guía al sistema en 1 clic</div>
+                <ul class="module-features">
+                  <li>Web scraping certificado que extrae toda la información de las guías SINIGAN</li>
+                  <li>Importación automática de datos: animales, origen, propietario, vehículo, conductor</li>
+                  <li>Cero errores de transcripción y validación automática de vigencias</li>
+                  <li>Sin API oficial: solución única en el mercado</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">Recepción SINIGAN Scraper</h3>
-          <div class="module-headline">De la guía al sistema en 1 clic</div>
-          <ul class="module-features">
-            <li>Web scraping certificado que extrae toda la información de las guías SINIGAN</li>
-            <li>Importación automática de datos: animales, origen, propietario, vehículo, conductor</li>
-            <li>Cero errores de transcripción y validación automática de vigencias</li>
-            <li>Sin API oficial: solución única en el mercado</li>
-          </ul>
-        </div>
-        
-        <!-- Módulo 2: Checkpoints -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="3" y1="9" x2="21" y2="9"></line>
-              <line x1="9" y1="21" x2="9" y2="9"></line>
-            </svg>
+          
+          <!-- Slide 2: Checkpoints -->
+          <div class="carousel-slide" data-slide="1">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/checkpoints.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                  </svg>
+                </div>
+                <h3 class="module-title">Checkpoints Dinámicos</h3>
+                <div class="module-headline">Control minuto a minuto</div>
+                <ul class="module-features">
+                  <li>Tablero Kanban que muestra ubicación de cada lote (corrales, faena, frío, despacho)</li>
+                  <li>Seguimiento en tiempo real del estado de cada animal dentro del proceso</li>
+                  <li>Compatible con sistemas RFID/QR opcionales para seguimiento automatizado</li>
+                  <li>Alertas configurables vía Slack/WhatsApp si un lote se estanca</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">Checkpoints Dinámicos</h3>
-          <div class="module-headline">Control minuto a minuto</div>
-          <ul class="module-features">
-            <li>Tablero Kanban que muestra ubicación de cada lote (corrales, faena, frío, despacho)</li>
-            <li>Seguimiento en tiempo real del estado de cada animal dentro del proceso</li>
-            <li>Compatible con sistemas RFID/QR opcionales para seguimiento automatizado</li>
-            <li>Alertas configurables vía Slack/WhatsApp si un lote se estanca</li>
-          </ul>
-        </div>
-        
-        <!-- Módulo 3: Impresión de Precintos -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 2h3a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3"></path>
-              <path d="M7 16h10"></path>
-              <path d="M7 12h10"></path>
-              <path d="M7 8h10"></path>
-            </svg>
+          
+          <!-- Slide 3: Precintos -->
+          <div class="carousel-slide" data-slide="2">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/precintos.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 2h3a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3"></path>
+                    <path d="M7 16h10"></path>
+                    <path d="M7 12h10"></path>
+                    <path d="M7 8h10"></path>
+                  </svg>
+                </div>
+                <h3 class="module-title">Impresión Automática de Precintos</h3>
+                <div class="module-headline">Etiquetas únicas en segundos</div>
+                <ul class="module-features">
+                  <li>Integración directa con impresoras térmicas Zebra, TSC, SATO y más</li>
+                  <li>Generación automática de etiquetas personalizadas con logo, códigos y secuencias</li>
+                  <li>Múltiples plantillas de maquila por cliente</li>
+                  <li>Ahorro de horas-hombre y eliminación de errores de impresión</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">Impresión Automática de Precintos</h3>
-          <div class="module-headline">100 etiquetas únicas en 25 segundos</div>
-          <ul class="module-features">
-            <li>Integración directa con impresoras térmicas Zebra, TSC, SATO y más</li>
-            <li>Generación automática de etiquetas personalizadas con logo, códigos y secuencias</li>
-            <li>Múltiples plantillas de maquila por cliente</li>
-            <li>Ahorro de horas-hombre y eliminación de errores de impresión</li>
-          </ul>
-        </div>
-        
-        <!-- Módulo 4: Decomisos -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2"></path>
-            </svg>
+          
+          <!-- Slide 4: Decomisos -->
+          <div class="carousel-slide" data-slide="3">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/decomisos.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2"></path>
+                  </svg>
+                </div>
+                <h3 class="module-title">Decomisos Veterinarios</h3>
+                <div class="module-headline">Registros que cierran hallazgos</div>
+                <ul class="module-features">
+                  <li>Registro detallado de órgano decomisado y motivo de decomiso</li>
+                  <li>App móvil con funcionamiento offline para uso en planta</li>
+                  <li>Anexo de fotos para documentación completa</li>
+                  <li>Integración automática al reporte de calidad</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">Decomisos Veterinarios</h3>
-          <div class="module-headline">Registros que cierran hallazgos</div>
-          <ul class="module-features">
-            <li>Registro detallado de órgano decomisado y motivo de decomiso</li>
-            <li>App móvil con funcionamiento offline para uso en planta</li>
-            <li>Anexo de fotos para documentación completa</li>
-            <li>Integración automática al reporte de calidad</li>
-          </ul>
-        </div>
-        
-        <!-- Módulo 5: Guías de Despacho -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
+          
+          <!-- Slide 5: Despacho -->
+          <div class="carousel-slide" data-slide="4">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/despacho.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <h3 class="module-title">Guías de Despacho</h3>
+                <div class="module-headline">Documentos listos para carretera</div>
+                <ul class="module-features">
+                  <li>Generación automática de guías de movilización con formatos certificados</li>
+                  <li>Campos INVIMA pre-cargados para cumplimiento normativo</li>
+                  <li>Códigos QR para verificación rápida</li>
+                  <li>Firma digital integrada para validación de documentos</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">Guías de Despacho</h3>
-          <div class="module-headline">Documentos listos para carretera</div>
-          <ul class="module-features">
-            <li>Generación automática de guías de movilización con formatos certificados</li>
-            <li>Campos INVIMA pre-cargados para cumplimiento normativo</li>
-            <li>Códigos QR para verificación rápida</li>
-            <li>Firma digital integrada para validación de documentos</li>
-          </ul>
-        </div>
-        
-        <!-- Módulo 6: PDF Generator -->
-        <div class="module-card animate-on-scroll">
-          <div class="module-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
+          
+          <!-- Slide 6: PDF Generator -->
+          <div class="carousel-slide" data-slide="5">
+            <div class="slide-content">
+              <div class="slide-video-container">
+                <video class="slide-video" loop muted playsinline>
+                  <source src="/videos/pdf.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+              </div>
+              <div class="slide-info">
+                <div class="slide-info-decoration decoration-line"></div>
+                <div class="slide-info-decoration decoration-circle"></div>
+                <div class="slide-info-decoration decoration-dot"></div>
+                <div class="module-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </div>
+                <h3 class="module-title">PDF Generator</h3>
+                <div class="module-headline">Certificados "one-click"</div>
+                <ul class="module-features">
+                  <li>Generación de certificados de beneficio, calidad y animales por cliente</li>
+                  <li>Plantillas personalizadas con branding de la planta</li>
+                  <li>Histórico completo y trazable de documentos</li>
+                  <li>Correos automáticos a clientes con certificados anexos</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 class="module-title">PDF Generator</h3>
-          <div class="module-headline">Certificados "one-click"</div>
-          <ul class="module-features">
-            <li>Generación de certificados de beneficio, calidad y animales por cliente</li>
-            <li>Plantillas personalizadas con branding de la planta</li>
-            <li>Histórico completo y trazable de documentos</li>
-            <li>Correos automáticos a clientes con certificados anexos</li>
-          </ul>
         </div>
       </div>
       
-      <div class="module-separator"></div>
+      <button class="carousel-control next-slide" aria-label="Siguiente módulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
       
-      <h2 class="section-title animate-on-scroll">Funcionalidades Destacadas</h2>
+      <!-- Indicadores de slide -->
+      <div class="carousel-indicators">
+        <button class="indicator active" data-slide="0" aria-label="Ir a slide 1"></button>
+        <button class="indicator" data-slide="1" aria-label="Ir a slide 2"></button>
+        <button class="indicator" data-slide="2" aria-label="Ir a slide 3"></button>
+        <button class="indicator" data-slide="3" aria-label="Ir a slide 4"></button>
+        <button class="indicator" data-slide="4" aria-label="Ir a slide 5"></button>
+        <button class="indicator" data-slide="5" aria-label="Ir a slide 6"></button>
+      </div>
+    </div>
+    
+    <div class="module-separator"></div>
+    
+    <h2 class="section-title animate-on-scroll">Funcionalidades Destacadas</h2>
+    
+    <div class="features-container">
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <path d="M20.4 14.5L16 10 4 20"></path>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Dashboard interactivo con filtros cruzados</h3>
+          <p>Panel de control con filtros dinámicos que permiten analizar datos por cliente, fecha, origen y más. Visualizaciones en tiempo real con gráficos y mapas de calor.</p>
+        </div>
+      </div>
       
-      <div class="features-container">
-        <div class="feature-box animate-on-scroll">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-              <circle cx="8.5" cy="8.5" r="1.5"></circle>
-              <path d="M20.4 14.5L16 10 4 20"></path>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h3>Dashboard interactivo con filtros cruzados</h3>
-            <p>Panel de control con filtros dinámicos que permiten analizar datos por cliente, fecha, origen y más. Visualizaciones en tiempo real con gráficos y mapas de calor.</p>
-          </div>
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
         </div>
-        
-        <div class="feature-box animate-on-scroll">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h3>Reportes y plantillas personalizadas</h3>
-            <p>Reportes detallados con información de animales, pesos asignados y decomisos realizados, todo filtrado por cliente y con plantillas personalizables según necesidades específicas.</p>
-          </div>
+        <div class="feature-content">
+          <h3>Reportes y plantillas personalizadas</h3>
+          <p>Reportes detallados con información de animales, pesos asignados y decomisos realizados, todo filtrado por cliente y con plantillas personalizables según necesidades específicas.</p>
         </div>
-        
-        <div class="feature-box animate-on-scroll">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h3>Análisis de tendencias y alertas</h3>
-            <p>El sistema monitorea patrones y detecta anomalías, enviando alertas automáticas cuando hay cambios significativos en indicadores clave como tiempo de proceso o calidad.</p>
-          </div>
+      </div>
+      
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
         </div>
-        
-        <div class="feature-box animate-on-scroll">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h3>Respuesta rápida ante auditorías</h3>
-            <p>Acceso instantáneo a toda la información necesaria para auditorías del INVIMA, con búsqueda avanzada por fecha, cliente, lote o número de guía, reduciendo el tiempo de respuesta de horas a segundos.</p>
-          </div>
+        <div class="feature-content">
+          <h3>Análisis de tendencias y alertas</h3>
+          <p>El sistema monitorea patrones y detecta anomalías, enviando alertas automáticas cuando hay cambios significativos en indicadores clave como tiempo de proceso o calidad.</p>
+        </div>
+      </div>
+      
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Respuesta rápida ante auditorías</h3>
+          <p>Acceso instantáneo a toda la información necesaria para auditorías del INVIMA, con búsqueda avanzada por fecha, cliente, lote o número de guía, reduciendo el tiempo de respuesta de horas a segundos.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .modules-section {
+    background-color: var(--color-dark);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+  }
   
-  <style>
-    .modules-section {
-      background-color: var(--color-dark);
-      padding: 6rem 0;
-      position: relative;
-      overflow: hidden;
+  .modules-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 223, 180, 0.1) 0%, transparent 70%);
+    z-index: 1;
+  }
+  
+  .section-title {
+    font-family: var(--font-sans);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: white;
+    z-index: 2;
+  }
+  
+  .section-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Carrusel de módulos */
+  .modules-carousel {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 20, 0.7);
+    margin: 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  
+  .slide-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .slide-video-container {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(10, 10, 20);
+  }
+  
+  .slide-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1/1;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+  }
+  
+  .slide-info {
+    padding: 2.5rem;
+    background: rgba(10, 46, 54, 0.85);
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .slide-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(59, 223, 180, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+  }
+  
+  .slide-info::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(176, 66, 255, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+  }
+  
+  /* Elementos decorativos adicionales para el slide-info */
+  .slide-info-decoration {
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .decoration-line {
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(59, 223, 180, 0.3), transparent);
+    top: 20px;
+    right: 40px;
+    transform: rotate(-30deg);
+  }
+  
+  .decoration-circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(59, 223, 180, 0.2);
+    border-radius: 50%;
+    right: 30px;
+    top: 80px;
+  }
+  
+  .decoration-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(176, 66, 255, 0.3);
+    border-radius: 50%;
+    left: 50px;
+    bottom: 40px;
+  }
+  
+  .module-icon, .module-title, .module-headline, .module-features {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .module-icon {
+    color: rgba(59, 223, 180, 0.8);
+    margin-bottom: 1.5rem;
+    background: rgba(59, 223, 180, 0.05);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59, 223, 180, 0.2);
+  }
+  
+  .module-title {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .module-headline {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: rgba(176, 66, 255, 0.9);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .module-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .module-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .module-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(59, 223, 180, 0.7);
+    font-family: var(--font-sans);
+  }
+  
+  /* Controles del carrusel - ahora por fuera del contenedor */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(20, 20, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .carousel-control:hover {
+    background: rgba(176, 66, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: rgba(59, 223, 180, 0.9);
+  }
+  
+  .prev-slide {
+    left: -24px;
+  }
+  
+  .next-slide {
+    right: -24px;
+  }
+  
+  /* Indicadores del carrusel */
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .indicator.active {
+    background-color: rgba(176, 66, 255, 0.8);
+    box-shadow: 0 0 10px rgba(176, 66, 255, 0.4);
+  }
+  
+  .module-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 223, 180, 0.5), transparent);
+    margin: 4rem 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .feature-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: rgba(20, 20, 40, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(176, 66, 255, 0.3);
+  }
+  
+  .feature-icon {
+    color: rgba(59, 223, 180, 0.8);
+    background: rgba(20, 20, 40, 0.8);
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(59, 223, 180, 0.2);
+  }
+  
+  .feature-content {
+    flex-grow: 1;
+  }
+  
+  .feature-content h3 {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 992px) {
+    .features-container {
+      grid-template-columns: 1fr;
     }
     
-    .modules-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(59, 223, 180, 0.1) 0%, transparent 70%);
-      z-index: 1;
+    .prev-slide {
+      left: 10px;
     }
     
+    .next-slide {
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .section-title {
-      font-family: var(--font-sans);
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      position: relative;
-      color: white;
-      z-index: 2;
+      font-size: 2rem;
     }
     
-    .section-description {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 3rem;
-      max-width: 800px;
-      position: relative;
-      z-index: 2;
-    }
-  
-    .modules-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      position: relative;
-      z-index: 2;
-      margin-bottom: 4rem;
-    }
-    
-    .module-card {
-      background: rgba(10, 46, 54, 0.5);
-      border-radius: 12px;
-      border: 1px solid rgba(59, 223, 180, 0.2);
-      padding: 2rem;
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
+    .slide-content {
       flex-direction: column;
     }
     
-    .module-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 223, 180, 0.2);
-      border-color: var(--tracingpba-teal);
+    .slide-video-container {
+      flex: 0 0 100%;
+      aspect-ratio: 16 / 9;
+      max-height: none;
+    }
+    
+    .slide-info {
+      flex: 0 0 100%;
+      padding: 1.5rem;
     }
     
     .module-icon {
-      color: var(--tracingpba-teal);
-      margin-bottom: 1.5rem;
-      background: rgba(59, 223, 180, 0.1);
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-bottom: 1rem;
     }
     
     .module-title {
-      font-family: var(--font-sans);
-      font-size: 1.4rem;
-      color: white;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
     
     .module-headline {
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      color: var(--tracingpba-teal);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed rgba(59, 223, 180, 0.3);
-    }
-    
-    .module-features {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      flex-grow: 1;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
     }
     
     .module-features li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
     }
     
-    .module-features li::before {
-      content: '>';
-      position: absolute;
-      left: 0;
-      color: var(--tracingpba-teal);
-      font-family: var(--font-mono);
+    .carousel-container {
+      overflow: hidden;
+      border-radius: 10px;
     }
     
-    .module-separator {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(59, 223, 180, 0.5), transparent);
-      margin: 4rem 0;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .features-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 2rem;
-      position: relative;
-      z-index: 2;
+    .carousel-control {
+      width: 40px;
+      height: 40px;
     }
     
     .feature-box {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      background: rgba(10, 46, 54, 0.5);
-      border-radius: 12px;
-      border: 1px solid rgba(59, 223, 180, 0.2);
-      padding: 2rem;
-      transition: all 0.3s ease;
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 1.8rem;
     }
     
-    .feature-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 223, 180, 0.2);
-      border-color: var(--tracingpba-teal);
+    .section-description {
+      font-size: 1rem;
+    }
+    
+    .carousel-control {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .prev-slide {
+      left: 10px;
+    }
+    
+    .next-slide {
+      right: 10px;
+    }
+    
+    .feature-box {
+      flex-direction: column;
     }
     
     .feature-icon {
-      color: var(--tracingpba-teal);
-      background: rgba(59, 223, 180, 0.1);
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      margin-bottom: 1rem;
     }
     
-    .feature-content {
-      flex-grow: 1;
+    .module-title {
+      font-size: 1.3rem;
     }
     
-    .feature-content h3 {
-      font-family: var(--font-sans);
-      font-size: 1.25rem;
-      color: white;
-      margin-bottom: 0.75rem;
+    .module-headline {
+      font-size: 0.9rem;
     }
+  }
+</style>
+
+<!-- Script sin errores de TypeScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.prev-slide');
+    const nextButton = document.querySelector('.next-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const carouselContainer = document.querySelector('.carousel-container');
     
-    .feature-content p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+    let currentIndex = 0;
+    const slideCount = slides.length;
     
-    @media (max-width: 992px) {
-      .modules-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // Función para actualizar la posición del carrusel
+    function updateCarousel(indexValue) {
+      if (track instanceof HTMLElement) {
+        track.style.transform = `translateX(-${indexValue * 100}%)`;
       }
       
-      .features-container {
-        grid-template-columns: 1fr;
+      // Actualizar el estado de los indicadores
+      indicators.forEach(function(indicator, i) {
+        if (i === indexValue) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+      
+      // Reproducir el video actual y pausar los demás
+      slides.forEach(function(slide, i) {
+        const video = slide.querySelector('video');
+        if (video) {
+          if (i === indexValue) {
+            // Usamos un timeout para asegurar que el video se reproduce solo después de que la transición termine
+            setTimeout(function() {
+              video.play().catch(function(e) {
+                console.log("Autoplay prevented:", e);
+              });
+            }, 500);
+          } else {
+            video.pause();
+            // Reiniciar el video para que comience desde el principio la próxima vez
+            video.currentTime = 0;
+          }
+        }
+      });
+      
+      // Actualizar el índice actual
+      currentIndex = indexValue;
+    }
+    
+    // Manejar clic en el botón anterior
+    if (prevButton) {
+      prevButton.addEventListener('click', function() {
+        const newIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel(newIndex);
+      });
+    }
+    
+    // Manejar clic en el botón siguiente
+    if (nextButton) {
+      nextButton.addEventListener('click', function() {
+        const newIndex = (currentIndex + 1) % slideCount;
+        updateCarousel(newIndex);
+      });
+    }
+    
+    // Manejar clic en los indicadores
+    indicators.forEach(function(indicator, idx) {
+      indicator.addEventListener('click', function() {
+        updateCarousel(idx);
+      });
+    });
+    
+    // Carga progresiva de videos para mejor rendimiento
+    function lazyLoadVideos() {
+      slides.forEach(function(slide, i) {
+        const video = slide.querySelector('video');
+        if (video && i !== currentIndex) {
+          // Solo cargamos los videos vecinos para mejor rendimiento
+          if (Math.abs(i - currentIndex) <= 1 || i === 0 || i === slideCount - 1) {
+            const source = video.querySelector('source');
+            if (source) {
+              const dataSrc = source.getAttribute('src');
+              if (dataSrc) {
+                source.setAttribute('src', dataSrc);
+                video.load();
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Habilitar gestos de deslizamiento (swipe) para dispositivos táctiles
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    if (carouselContainer) {
+      carouselContainer.addEventListener('touchstart', function(event) {
+        if (event instanceof TouchEvent && event.changedTouches && event.changedTouches.length > 0) {
+          touchStartX = event.changedTouches[0].screenX;
+        }
+      }, {passive: true});
+      
+      carouselContainer.addEventListener('touchend', function(event) {
+        if (event instanceof TouchEvent && event.changedTouches && event.changedTouches.length > 0) {
+          touchEndX = event.changedTouches[0].screenX;
+          handleSwipe();
+        }
+      }, {passive: true});
+    }
+    
+    function handleSwipe() {
+      const minSwipeDistance = 30;
+      
+      if (touchEndX < touchStartX - minSwipeDistance) {
+        // Deslizar a la izquierda (siguiente)
+        const newIndex = (currentIndex + 1) % slideCount;
+        updateCarousel(newIndex);
+      }
+      
+      if (touchEndX > touchStartX + minSwipeDistance) {
+        // Deslizar a la derecha (anterior)
+        const newIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel(newIndex);
       }
     }
     
-    @media (max-width: 768px) {
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .module-card, 
-      .feature-box {
-        padding: 1.5rem;
-      }
-      
-      .feature-box {
-        flex-direction: column;
-      }
-      
-      .feature-icon {
-        margin-bottom: 1rem;
+    // Ajustar la altura del contenedor en móviles para evitar desbordamiento
+    function adjustHeight() {
+      if (window.innerWidth <= 768) {
+        slides.forEach(function(slide) {
+          const content = slide.querySelector('.slide-content');
+          if (content && content instanceof HTMLElement) {
+            content.style.minHeight = 'auto';
+          }
+        });
       }
     }
     
-    @media (max-width: 576px) {
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .section-description {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    // Inicializar el primer slide
+    updateCarousel(0);
+    lazyLoadVideos();
+    
+    // Ajustar al cargar y al cambiar el tamaño de la ventana
+    adjustHeight();
+    window.addEventListener('resize', adjustHeight);
+  });
+</script>
