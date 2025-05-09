@@ -1,0 +1,833 @@
+---
+// Footer.astro - Pie de página con estética cyberpunk para TracingPBA
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <!-- Fondos y elementos decorativos -->
+  <div class="footer-background">
+    <div class="grid-overlay"></div>
+    <div class="glow-effect"></div>
+    <div class="circuit-lines"></div>
+  </div>
+  
+  <!-- Línea decorativa superior -->
+  <div class="top-divider">
+    <div class="line-segment"></div>
+    <div class="line-segment"></div>
+    <div class="line-segment"></div>
+    <div class="line-segment"></div>
+    <div class="line-segment"></div>
+  </div>
+  
+  <!-- Contenido principal del footer -->
+  <div class="container">
+    <div class="footer-content">
+      <!-- Columna del logo -->
+      <div class="footer-logo-column">
+        <div class="footer-logo">
+          <div class="logo-container">
+            <div class="logo-wrap">
+              <span class="logo-transformia">TRANSFORMIA</span>
+              <span class="logo-slash">/</span>
+              <span class="logo-product">TRACINGPBA</span>
+            </div>
+            <div class="logo-badge">TRAZABILIDAD 360°</div>
+          </div>
+        </div>
+        
+        <p class="footer-slogan">
+          Sistema integral de trazabilidad para plantas de beneficio animal. Automatiza SINIGAN, precintos y reportes regulatorios.
+        </p>
+        
+        <div class="social-container">
+          <div class="social-label">
+            <div class="label-text">Síguenos</div>
+            <div class="label-line"></div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Columna de contacto -->
+      <div class="footer-contact-column">
+        <h3 class="footer-title">Contacto</h3>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <span>+57 310 000 0000</span>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <span>contacto@transformia.dev</span>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>Tauramena, Casanare</span>
+          </div>
+        </div>
+        
+        <div class="tech-code">
+          <div class="code-header">
+            <span class="code-label">TRACING</span>
+            <div class="code-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="code-content">01010100 • 10100010 • 01100001</div>
+        </div>
+        
+        <a href="https://transformia.dev" class="parent-site-link" target="_blank" rel="noopener noreferrer">
+          <span>Visitar transformia.dev</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Características de TracingPBA en lugar de tecnologías -->
+    <div class="certifications">
+      <div class="cert-label">Características</div>
+      <div class="cert-logos">
+        <div class="cert-logo">TRAZABILIDAD</div>
+        <div class="cert-logo">PRECINTOS</div>
+        <div class="cert-logo">REPORTES</div>
+        <div class="cert-logo">ANALÍTICA</div>
+        <div class="cert-logo">NORMATIVIDAD</div>
+      </div>
+    </div>
+    
+    <!-- Barra inferior de copyright -->
+    <div class="copyright-bar">
+      <div class="copyright">
+        &copy; {currentYear} Transformia. Todos los derechos reservados.
+      </div>
+      
+      <div class="footer-legal">
+        <a href="/politica-privacidad" class="legal-link">Política de Privacidad</a>
+        <a href="/terminos" class="legal-link">Términos de Uso</a>
+        <a href="/cookiepolicy" class="legal-link">Política de Cookies</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Línea de datos decorativa inferior -->
+  <div class="footer-data-line">
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+    <div class="data-segment"></div>
+  </div>
+</footer>
+
+<style is:global>
+  /* Variables y estilos base - Actualizados para coincidir con el Hero */
+  :root {
+    --neon-purple: #b042ff;
+    --neon-blue: #4287ff;
+    --neon-pink: #ff42b0;
+    --tracingpba-teal: #42ffd1; /* Actualizado para coincidir con --tracingpba-teal del Hero */
+    --tracingpba-dark: #0a2e36;
+    --tracingpba-accent: #42ffd1; /* Unificado con el color principal */
+    --tracingpba-light: #f0f7f4;
+    --dark-bg: #0a0a14;
+    --darker-bg: #070710;
+    --footer-bg: #0a0a14; /* Actualizado para coincidir con el fondo del Hero */
+  }
+  
+  .site-footer {
+    position: relative;
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 4rem 0 2rem;
+  }
+  
+  /* Fondos y efectos */
+  .footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(66, 255, 209, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(66, 255, 209, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px; /* Actualizado para coincidir con el grid del Hero */
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top center, rgba(66, 255, 209, 0.15) 0%, transparent 70%);
+    z-index: 2;
+  }
+  
+  .circuit-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2342ffd1' stroke-width='0.5' opacity='0.2' fill='none' d='M10,10 L90,10 L90,90 L10,90 Z M10,50 L50,50 M50,50 L50,90 M50,50 L50,10 M50,50 L90,50 M30,10 L30,30 M70,10 L70,30 M30,90 L30,70 M70,90 L70,70'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.1;
+    z-index: 3;
+  }
+  
+  /* Línea decorativa superior */
+  .top-divider {
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background: rgba(66, 255, 209, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .line-segment {
+    height: 100%;
+    flex: 1;
+    background: var(--tracingpba-teal);
+    opacity: 0.2;
+    position: relative;
+  }
+  
+  .line-segment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--tracingpba-teal);
+    opacity: 0;
+    animation: line-pulse 3s infinite;
+  }
+  
+  .line-segment:nth-child(1)::before { animation-delay: 0s; }
+  .line-segment:nth-child(2)::before { animation-delay: 0.6s; }
+  .line-segment:nth-child(3)::before { animation-delay: 1.2s; }
+  .line-segment:nth-child(4)::before { animation-delay: 1.8s; }
+  .line-segment:nth-child(5)::before { animation-delay: 2.4s; }
+  
+  @keyframes line-pulse {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Estructura del contenido */
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Columna del logo */
+  .footer-logo-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-logo {
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .logo-transformia {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--neon-purple);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .logo-slash {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .logo-product {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--tracingpba-teal);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .logo-badge {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    color: var(--tracingpba-teal);
+    letter-spacing: 1px;
+    padding: 0.25rem 0.5rem;
+    background: rgba(66, 255, 209, 0.1);
+    border: 1px solid rgba(66, 255, 209, 0.3);
+    border-radius: 3px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .footer-slogan {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Actualizado para mejor legibilidad */
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  /* Social links */
+  .social-container {
+    margin-top: auto;
+  }
+  
+  .social-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .label-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 1rem;
+  }
+  
+  .label-line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(66, 255, 209, 0.5), transparent);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(66, 255, 209, 0.1);
+    border: 1px solid rgba(66, 255, 209, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background: rgba(66, 255, 209, 0.3);
+    border-color: var(--tracingpba-teal);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(66, 255, 209, 0.2);
+  }
+  
+  /* Títulos de sección */
+  .footer-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--tracingpba-teal);
+    box-shadow: 0 0 10px var(--tracingpba-teal);
+  }
+  
+  /* Columna de contacto */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Actualizado para mejor legibilidad */
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+  }
+  
+  .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(66, 255, 209, 0.1);
+    color: var(--tracingpba-teal);
+  }
+  
+  /* Enlace a transformia.dev */
+  .parent-site-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(176, 66, 255, 0.1);
+    border: 1px solid rgba(176, 66, 255, 0.3);
+    border-radius: 4px;
+    color: var(--neon-purple);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .parent-site-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(176, 66, 255, 0.3), transparent);
+    transition: 0.5s;
+    z-index: -1;
+  }
+  
+  .parent-site-link:hover {
+    background: rgba(176, 66, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(176, 66, 255, 0.2);
+  }
+  
+  .parent-site-link:hover::before {
+    left: 100%;
+  }
+  
+  /* Tech code box */
+  .tech-code {
+    background: rgba(10, 46, 54, 0.5);
+    border: 1px solid rgba(66, 255, 209, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+  }
+  
+  .code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: rgba(66, 255, 209, 0.1);
+    border-bottom: 1px solid rgba(66, 255, 209, 0.3);
+  }
+  
+  .code-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--tracingpba-teal);
+    letter-spacing: 1px;
+  }
+  
+  .code-dots {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .code-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(66, 255, 209, 0.5);
+  }
+  
+  .code-dots span:nth-child(1) {
+    animation: dot-pulse 2s infinite;
+  }
+  
+  .code-dots span:nth-child(2) {
+    animation: dot-pulse 2s infinite;
+    animation-delay: 0.5s;
+  }
+  
+  .code-dots span:nth-child(3) {
+    animation: dot-pulse 2s infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dot-pulse {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+      background-color: var(--tracingpba-teal);
+    }
+  }
+  
+  .code-content {
+    padding: 0.75rem 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+  
+  /* Características de TracingPBA (antes Certificaciones) */
+  .certifications {
+    border-top: 1px solid rgba(66, 255, 209, 0.2);
+    border-bottom: 1px solid rgba(66, 255, 209, 0.2);
+    padding: 1.5rem 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cert-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cert-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .cert-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--tracingpba-teal);
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    background: rgba(66, 255, 209, 0.1);
+    border: 1px solid rgba(66, 255, 209, 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-logo:hover {
+    background: rgba(66, 255, 209, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(66, 255, 209, 0.4); /* Añadido glow similar al de los botones del Hero */
+  }
+  
+  /* Copyright bar */
+  .copyright-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .copyright {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .legal-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .legal-link:hover {
+    color: var(--tracingpba-teal);
+  }
+  
+  /* Línea de datos decorativa inferior */
+  .footer-data-line {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    background: rgba(10, 46, 54, 0.8);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .data-segment {
+    height: 100%;
+    flex: 1;
+    background: var(--tracingpba-teal);
+    opacity: 0.2;
+  }
+  
+  .data-segment:nth-child(odd) {
+    animation: data-pulse 4s infinite;
+  }
+  
+  .data-segment:nth-child(even) {
+    animation: data-pulse 4s infinite reverse;
+  }
+  
+  @keyframes data-pulse {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Clases de animación */
+  .animate-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .animate-element.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .footer-content {
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .copyright-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .footer-legal {
+      justify-content: center;
+    }
+    
+    .social-container {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      width: 95%;
+      padding: 2.5rem 0 1rem;
+    }
+    
+    .cert-logos {
+      gap: 1rem;
+    }
+    
+    .cert-logo {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+    
+    .footer-title {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    .logo-transformia,
+    .logo-product {
+      font-size: 1.1rem;
+    }
+    
+    .footer-legal {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animación para efecto de hover en los logos de características
+    var certLogos = document.querySelectorAll('.cert-logo');
+    
+    for (var i = 0; i < certLogos.length; i++) {
+      var logo = certLogos[i];
+      
+      logo.addEventListener('mouseenter', function() {
+        // Aplicar color teal al hacer hover
+        this.style.color = 'var(--tracingpba-teal)';
+        this.style.borderColor = 'var(--tracingpba-teal)';
+        this.style.boxShadow = '0 0 15px rgba(66, 255, 209, 0.4)';
+      });
+      
+      logo.addEventListener('mouseleave', function() {
+        // Restaurar color original
+        this.style.color = '';
+        this.style.borderColor = '';
+        this.style.boxShadow = '';
+      });
+    }
+    
+    // Efecto de desplazamiento para la línea de datos
+    var dataSegments = document.querySelectorAll('.data-segment');
+    
+    // Asignar diferentes retrasos de animación a cada segmento
+    for (var i = 0; i < dataSegments.length; i++) {
+      var segment = dataSegments[i];
+      segment.style.animationDelay = (i * 0.2) + 's';
+    }
+    
+    // Añadir clases de animación cuando el footer entra en viewport
+    function observeElements() {
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        
+        var elements = document.querySelectorAll('.footer-content > div, .certifications, .copyright-bar');
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.add('animate-element');
+          observer.observe(elements[i]);
+        }
+      } else {
+        // Fallback para navegadores antiguos
+        var elements = document.querySelectorAll('.footer-content > div, .certifications, .copyright-bar');
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.add('animate-in');
+        }
+      }
+    }
+    
+    observeElements();
+  });
+</script>
